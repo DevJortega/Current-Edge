@@ -82,7 +82,9 @@ export function Product() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  
+                  <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    {feature.icon()}
+                  </div>
                   <div>
                     
                     
