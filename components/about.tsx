@@ -84,6 +84,25 @@ export function About({ isDark }: AboutProps) {
           </p>
         </div>
 
+        <div className="flex flex-col items-center justify-center mb-16">
+          <div
+            className={`w-24 h-24 rounded-full flex items-center justify-center mb-4 transition-colors ${
+              isDark ? "bg-blue-900/30 border-2 border-blue-400" : "bg-blue-50 border-2 border-blue-200"
+            }`}
+          >
+            <Image
+              src={isDark ? "/images/current-edge-logo-dark.png" : "/images/current-edge-logo.png"}
+              alt="Current Edge Logo"
+              width={48}
+              height={48}
+              className="w-12 h-12 object-contain"
+            />
+          </div>
+          <h3 className={`font-serif font-bold text-2xl transition-colors ${isDark ? "text-white" : "text-gray-900"}`}>
+            Current Edge
+          </h3>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card
@@ -115,25 +134,6 @@ export function About({ isDark }: AboutProps) {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="flex flex-col items-center justify-center my-16">
-          <div
-            className={`w-24 h-24 rounded-full flex items-center justify-center mb-4 transition-colors ${
-              isDark ? "bg-blue-900/30 border-2 border-blue-400" : "bg-blue-50 border-2 border-blue-200"
-            }`}
-          >
-            <Image
-              src={isDark ? "/images/current-edge-logo-dark.png" : "/images/current-edge-logo.png"}
-              alt="Current Edge Logo"
-              width={48}
-              height={48}
-              className="w-12 h-12 object-contain"
-            />
-          </div>
-          <h3 className={`font-serif font-bold text-2xl transition-colors ${isDark ? "text-white" : "text-gray-900"}`}>
-            Current Edge
-          </h3>
         </div>
 
         <div
