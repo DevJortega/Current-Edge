@@ -20,7 +20,7 @@ export function Intro({ isDark }: IntroProps) {
         }`}
       >
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/current-edge-logo.png%281%29%285%29-yNEaxr3xXU95HNLBZA8jXOmDVj006e.png"
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/current-edge-logo.png%281%29%285%29%281%29-MM1GUpXwCliGNvQdyhkxEkLoaYS5C0.png"
           alt="Current Edge Logo"
           width={160}
           height={160}
