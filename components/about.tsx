@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card"
-import Image from "next/image"
 
 const TargetIcon = () => (
   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,6 +32,12 @@ const AwardIcon = () => (
   </svg>
 )
 
+const LightningIcon = () => (
+  <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+  </svg>
+)
+
 interface AboutProps {
   isDark: boolean
 }
@@ -62,4 +67,57 @@ export function About({ isDark }: AboutProps) {
       description: "Nos comprometemos con los más altos estándares de calidad en cada proyecto que desarrollamos.",
     },
   ]
+
+  return (
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <div className="flex justify-center mb-6">
+            <div
+              className={`w-32 h-32 rounded-full border-4 flex items-center justify-center ${
+                isDark ? "border-blue-400 bg-blue-900/20 text-blue-400" : "border-blue-600 bg-blue-50 text-blue-600"
+              }`}
+            >
+              <LightningIcon />
+            </div>
+          </div>
+          <h1 className={`text-4xl font-bold mb-8 ${isDark ? "text-white" : "text-gray-900"}`}>Current Edge</h1>
+        </div>
+
+        <div className="text-center mb-16">
+          <h2 className={`text-3xl font-bold mb-6 ${isDark ? "text-white" : "text-gray-900"}`}>Sobre Current Edge</h2>
+          <p className={`text-xl max-w-3xl mx-auto ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+            Somos una empresa especializada en el diseño y desarrollo de instrumentos de medición de corriente eléctrica
+            de alta precisión. Nuestro enfoque se centra en la innovación tecnológica y la excelencia en cada proyecto
+            que emprendemos.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <Card
+              key={index}
+              className={`${
+                isDark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-200"
+              } hover:shadow-lg transition-shadow duration-300`}
+            >
+              <CardContent className="p-6 text-center">
+                <div
+                  className={`inline-flex items-center justify-center w-12 h-12 rounded-lg mb-4 ${
+                    isDark ? "bg-blue-900 text-blue-400" : "bg-blue-100 text-blue-600"
+                  }`}
+                >
+                  <feature.icon />
+                </div>
+                <h3 className={`text-xl font-semibold mb-3 ${isDark ? "text-white" : "text-gray-900"}`}>
+                  {feature.title}
+                </h3>
+                <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>{feature.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }

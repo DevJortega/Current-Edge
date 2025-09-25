@@ -65,7 +65,7 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
               Inicio
             </a>
             <a
-              href="#nosotros"
+              href="#about"
               className={`transition-colors ${
                 isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
               }`}
@@ -129,7 +129,7 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
                 Inicio
               </a>
               <a
-                href="#nosotros"
+                href="#about"
                 className={`block px-3 py-2 transition-colors ${
                   isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
                 }`}

@@ -35,7 +35,11 @@ const MapPinIcon = () => (
   </svg>
 )
 
-export function Contact() {
+interface ContactProps {
+  isDark: boolean
+}
+
+export function Contact({ isDark }: ContactProps) {
   const socialLinks = [
     {
       icon: GithubIcon,
@@ -76,31 +80,41 @@ export function Contact() {
   ]
 
   return (
-    <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="contacto" className={`py-20 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-black" : "bg-white"}`}>
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="font-serif font-bold text-3xl sm:text-4xl text-foreground">Conectemos</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <h2 className={`font-serif font-bold text-3xl sm:text-4xl ${isDark ? "text-white" : "text-gray-900"}`}>
+            Conectemos
+          </h2>
+          <p className={`text-xl max-w-3xl mx-auto ${isDark ? "text-gray-300" : "text-gray-600"}`}>
             ¿Tienes preguntas sobre nuestro proyecto o quieres colaborar con nosotros? No dudes en contactarnos. Estamos
             siempre abiertos a nuevas oportunidades y colaboraciones.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <Card>
+          <Card className={isDark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-200"}>
             <CardHeader>
-              <CardTitle className="font-serif">Envíanos un mensaje</CardTitle>
+              <CardTitle className={`font-serif ${isDark ? "text-white" : "text-gray-900"}`}>
+                Envíanos un mensaje
+              </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="name"
+                    className={`block text-sm font-medium mb-2 ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                  >
                     Nombre
                   </label>
                   <Input id="name" placeholder="Tu nombre completo" />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  <label
+                    htmlFor="email"
+                    className={`block text-sm font-medium mb-2 ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                  >
                     Email
                   </label>
                   <Input id="email" type="email" placeholder="tu@email.com" />
@@ -108,14 +122,20 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="subject"
+                  className={`block text-sm font-medium mb-2 ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                >
                   Asunto
                 </label>
                 <Input id="subject" placeholder="¿En qué podemos ayudarte?" />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                <label
+                  htmlFor="message"
+                  className={`block text-sm font-medium mb-2 ${isDark ? "text-gray-300" : "text-gray-700"}`}
+                >
                   Mensaje
                 </label>
                 <Textarea id="message" placeholder="Cuéntanos más sobre tu consulta o propuesta..." rows={5} />
@@ -126,28 +146,36 @@ export function Contact() {
           </Card>
 
           <div className="space-y-8">
-            <Card>
+            <Card className={isDark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-200"}>
               <CardHeader>
-                <CardTitle className="font-serif">Información de contacto</CardTitle>
+                <CardTitle className={`font-serif ${isDark ? "text-white" : "text-gray-900"}`}>
+                  Información de contacto
+                </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      {info.icon()}
+                    <div
+                      className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+                        isDark ? "bg-blue-900/30 text-blue-400" : "bg-blue-100 text-blue-600"
+                      }`}
+                    >
+                      <info.icon />
                     </div>
                     <div>
-                      <p className="font-medium text-sm">{info.label}</p>
-                      <p className="text-muted-foreground text-sm">{info.value}</p>
+                      <p className={`font-medium text-sm ${isDark ? "text-white" : "text-gray-900"}`}>{info.label}</p>
+                      <p className={`text-sm ${isDark ? "text-gray-300" : "text-gray-600"}`}>{info.value}</p>
                     </div>
                   </div>
                 ))}
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className={isDark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-200"}>
               <CardHeader>
-                <CardTitle className="font-serif">Síguenos en redes sociales</CardTitle>
+                <CardTitle className={`font-serif ${isDark ? "text-white" : "text-gray-900"}`}>
+                  Síguenos en redes sociales
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex space-x-4">
@@ -155,22 +183,28 @@ export function Contact() {
                     <a
                       key={index}
                       href={social.href}
-                      className={`w-12 h-12 bg-muted rounded-lg flex items-center justify-center text-muted-foreground transition-colors ${social.color}`}
+                      className={`w-12 h-12 rounded-lg flex items-center justify-center transition-colors ${
+                        isDark
+                          ? "bg-gray-700 text-gray-400 hover:text-blue-400"
+                          : "bg-gray-100 text-gray-600 hover:text-blue-600"
+                      }`}
                       aria-label={social.label}
                     >
-                      {social.icon()}
+                      <social.icon />
                     </a>
                   ))}
                 </div>
-                <p className="text-muted-foreground text-sm mt-4">
+                <p className={`text-sm mt-4 ${isDark ? "text-gray-300" : "text-gray-600"}`}>
                   Mantente al día con nuestros últimos proyectos y avances en el mundo de la electrónica.
                 </p>
               </CardContent>
             </Card>
 
-            <div className="bg-accent/10 rounded-lg p-6">
-              <h3 className="font-serif font-semibold text-lg mb-2">¿Eres estudiante?</h3>
-              <p className="text-muted-foreground text-sm mb-4">
+            <div className={`rounded-lg p-6 ${isDark ? "bg-gray-800/50" : "bg-blue-50"}`}>
+              <h3 className={`font-serif font-semibold text-lg mb-2 ${isDark ? "text-white" : "text-gray-900"}`}>
+                ¿Eres estudiante?
+              </h3>
+              <p className={`text-sm mb-4 ${isDark ? "text-gray-300" : "text-gray-600"}`}>
                 Si eres estudiante de ingeniería y te interesa colaborar en proyectos similares, ¡nos encantaría
                 conocerte!
               </p>
