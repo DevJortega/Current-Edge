@@ -40,21 +40,17 @@ export default function Home() {
   }, [isDark])
 
   return (
-    <main
-  className={`min-h-screen transition-colors duration-500 ${
-    isDark
-      ? "bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white"
-      : "bg-gradient-to-r from-blue-50 via-white to-blue-100 text-gray-900"
-  }`}
->
-  <Header isDark={isDark} toggleDarkMode={toggleDarkMode} />
-  <Intro isDark={isDark} />
-  <About isDark={isDark} />
-  <Team isDark={isDark} />
-  <Product isDark={isDark} />
-  <Contact isDark={isDark} />
-  <Footer />
-</main>
+  <main
+    className="min-h-screen transition-colors duration-300 bg-transparent text-gray-900 dark:text-white"
+  >
+    <Header isDark={isDark} toggleDarkMode={toggleDarkMode} />
+    <Hero isDark={isDark} />
+    <About isDark={isDark} />
+    <Team isDark={isDark} />
+    <Product isDark={isDark} />
+    <Contact isDark={isDark} />
+    <Footer />
+  </main>
+)
 
-  )
 }
