@@ -91,7 +91,7 @@ export function Product({ isDark }: ProductProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
   <div>
     <video
-      src="/pcb.mp4"
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pcb-UwmH4gEuuBoZhhxMtTfPppLA8UbeRs.mp4"
       autoPlay
       muted
       loop
