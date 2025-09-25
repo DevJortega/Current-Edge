@@ -48,15 +48,16 @@
     color: rgb(var(--foreground));
   }
 
-  /* Modo claro */
+    /* 🌞 Modo claro */
   html:not(.dark), body:not(.dark) {
-    @apply bg-gradient-to-r from-blue-50 via-white to-blue-100;
+    background: linear-gradient(to bottom right, #e0f2fe, #ffffff, #dbeafe);
   }
 
-  /* Modo oscuro */
+  /* 🌙 Modo oscuro */
   html.dark, body.dark {
-    @apply bg-gradient-to-br from-gray-900 via-black to-gray-800;
+    background: linear-gradient(to bottom right, #0f172a, #1e293b, #000000);
   }
+
 }
 
 
