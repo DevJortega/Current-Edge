@@ -13,18 +13,14 @@ export function Intro({ isDark }: IntroProps) {
       }`}
     >
       <div
-        className={`w-48 h-48 rounded-full flex items-center justify-center mb-6 transition-colors ${
+        className={`w-48 h-48 rounded-full flex items-center justify-center mb-6 transition-colors border-background text-background bg-card ${
           isDark
             ? "bg-blue-900/30 border-4 border-blue-400"
             : "bg-blue-50 border-4 border-blue-200"
         }`}
       >
         <Image
-          src={
-            isDark
-              ? "/images/current-edge-logo-dark.png"
-              : "/images/current-edge-logo.png"
-          }
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/current-edge-logo.png-qXDvFUiCSJbgeT7VYL7FZ32QGTn9bS.png"
           alt="Current Edge Logo"
           width={160}
           height={160}
