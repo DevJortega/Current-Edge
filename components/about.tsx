@@ -69,21 +69,6 @@ export function About({ isDark }: AboutProps) {
       className={`py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${isDark ? "bg-gray-900" : "bg-gray-50"}`}
     >
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center space-y-4 mb-16">
-          <h2
-            className={`font-serif font-bold text-3xl sm:text-4xl transition-colors ${
-              isDark ? "text-white" : "text-gray-900"
-            }`}
-          >
-            Sobre Current Edge
-          </h2>
-          <p className={`text-xl max-w-3xl mx-auto transition-colors ${isDark ? "text-gray-300" : "text-gray-600"}`}>
-            {
-              "Somos un equipo de ingenieros especializados en electrónica analógica, comprometidos con el diseño \ny desarrollo de sistemas de medición de corriente de alta precisión y confiabilidad."
-            }
-          </p>
-        </div>
-
         <div className="flex flex-col items-center justify-center mb-16">
           <div
             className={`w-24 h-24 rounded-full flex items-center justify-center mb-4 transition-colors ${
@@ -101,6 +86,21 @@ export function About({ isDark }: AboutProps) {
           <h3 className={`font-serif font-bold text-2xl transition-colors ${isDark ? "text-white" : "text-gray-900"}`}>
             Current Edge
           </h3>
+        </div>
+
+        <div className="text-center space-y-4 mb-16">
+          <h2
+            className={`font-serif font-bold text-3xl sm:text-4xl transition-colors ${
+              isDark ? "text-white" : "text-gray-900"
+            }`}
+          >
+            Sobre Current Edge
+          </h2>
+          <p className={`text-xl max-w-3xl mx-auto transition-colors ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+            {
+              "Somos un equipo de ingenieros especializados en electrónica analógica, comprometidos con el diseño \ny desarrollo de sistemas de medición de corriente de alta precisión y confiabilidad."
+            }
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
