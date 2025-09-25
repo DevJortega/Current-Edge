@@ -20,7 +20,11 @@ export function Intro({ isDark }: IntroProps) {
         }`}
       >
         <Image
-          src="/images/design-mode/current-edge-logo.png%281%29%285%29%282%29%281%29.png"
+          src={
+            isDark
+              ? "/images/design-mode/current-edge-logo-dark.png" // 👈 tu logo para modo oscuro
+              : "/images/design-mode/current-edge-logo.png" // 👈 tu logo para modo claro
+          }
           alt="Current Edge Logo"
           width={160}
           height={160}
