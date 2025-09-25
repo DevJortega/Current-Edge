@@ -75,7 +75,7 @@ export function Product({ isDark }: ProductProps) {
   ]
 
   return (
-    <section id="producto" className={`py-20 px-4 sm:px-6 lg:px-8 bg-transparent text-transparent ${isDark ? "bg-gray-900" : "bg-slate-50"}`}>
+    <section id="producto" className={`py-20 px-4 sm:px-6 lg:px-8 bg-transparent ${isDark ? "bg-gray-900" : "bg-slate-50"}`}>
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-4 mb-16">
           <h2 className={`font-serif font-bold text-3xl sm:text-4xl ${isDark ? "text-white" : "text-gray-900"}`}>
@@ -89,13 +89,17 @@ export function Product({ isDark }: ProductProps) {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <img
-              src="/advanced-electronic-device.png"
-              alt="Producto ElectroTech"
-              className="rounded-lg shadow-xl w-full h-auto"
-            />
-          </div>
+  <div>
+    <video
+      src="/pcb.mp4"
+      autoPlay
+      muted
+      loop
+      playsInline
+      controls   // 👈 opcional: si quieres mostrar botones de reproducción
+      className="rounded-lg shadow-xl w-full h-auto"
+    />
+  </div>
 
           <div className="space-y-6">
             <div>

@@ -1,8 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Intro } from "@/components/intro"   // 👈 AQUI importamos el Intro
 import { Header } from "@/components/header"
+import { Intro } from "@/components/intro"   // 👈 este es el del logo circular
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Team } from "@/components/team"
@@ -40,15 +40,20 @@ export default function Home() {
   }, [isDark])
 
   return (
-  <main className="min-h-screen transition-colors duration-300">
-    <Header isDark={isDark} toggleDarkMode={toggleDarkMode} />
-    <Hero isDark={isDark} />
-    <About isDark={isDark} />
-    <Team isDark={isDark} />
-    <Product isDark={isDark} />
-    <Contact isDark={isDark} />
-    <Footer />
-  </main>
-)
+    <main className="min-h-screen transition-colors duration-300">
+      {/* Logo + nombre */}
+      <Intro isDark={isDark} />
 
+      {/* Navbar */}
+      <Header isDark={isDark} toggleDarkMode={toggleDarkMode} />
+
+      {/* Resto de secciones */}
+      <Hero isDark={isDark} />
+      <About isDark={isDark} />
+      <Team isDark={isDark} />
+      <Product isDark={isDark} />
+      <Contact isDark={isDark} />
+      <Footer />
+    </main>
+  )
 }

@@ -13,14 +13,14 @@ export function Intro({ isDark }: IntroProps) {
       }`}
     >
       <div
-        className={`w-48 h-48 flex items-center justify-center mb-6 transition-colors text-popover-foreground underline bg-gray-100 opacity-100 rounded-full shadow-2xl border-primary ${
+        className={`w-48 h-48 flex items-center justify-center mb-6 transition-colors text-popover-foreground underline opacity-100 rounded-full shadow-2xl border-primary bg-slate-50 ${
           isDark
             ? "bg-blue-900/30 border-4 border-blue-400"
             : "bg-blue-50 border-4 border-blue-200"
         }`}
       >
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/current-edge-logo.png%281%29%285%29%281%29-343mA5l5MIwgLeWirq0M2TWoZpjZ0M.png"
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/current-edge-logo.png%281%29%285%29%282%29-JfwGWYDdlTYffnnMKafEVi68ptsZO4.png"
           alt="Current Edge Logo"
           width={160}
           height={160}
