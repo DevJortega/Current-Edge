@@ -55,7 +55,7 @@ export function Hero({ isDark }: HeroProps) {
 
           <div className="mb-0 mt-12 ml-0 mr-0 px-6 py-11 border-0 bg-transparent text-transparent border-transparent">
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/WhatsApp%20Image%202025-09-05%20at%201.39.59%20PM%281%29-peULpYi6HQKBio6Y8Amg6OtmLriJP0.jpeg"
+              src="/images/design-mode/WhatsApp%20Image%202025-09-05%20at%201.39.59%20PM(1).jpeg"
               alt="Circuito electrónico moderno"
               className="rounded-lg shadow-2xl max-w-full h-auto text-xs mx-auto my-0 px-0 py-0 w-9/12"
             />

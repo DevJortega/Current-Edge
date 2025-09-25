@@ -52,14 +52,9 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Barra principal */}
-        <div
-          className={`flex items-center rounded-full shadow-xl font-semibold text-lg justify-evenly gap-0 mx-0 my-0 px-3 py-0 w-auto h-14 border-2 opacity-100
-            ${isDark ? "bg-gray-900 border-gray-700 text-white" : "bg-slate-100 border-slate-200 text-gray-900"}`}
-        >
-          <div className="flex items-center">{/* Logo / nombre si lo usas */}</div>
+        <div className="flex items-center text-popover-foreground rounded-full shadow-xl border-slate-100 font-semibold text-lg justify-evenly gap-0 mx-0 my-0 px-3 py-0 w-auto h-14 border-2 opacity-100 bg-slate-100">
+          <div className="flex items-center">{/* Logo and name moved to About section */}</div>
 
-          {/* Links desktop */}
           <nav className="hidden md:flex items-center space-x-8">
             <a
               href="#inicio"
@@ -103,37 +98,26 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
             </a>
           </nav>
 
-          {/* Botones */}
           <div className="flex items-center space-x-2">
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleDarkMode}
-              className={`transition-colors ${
-                isDark ? "hover:bg-gray-800 text-white" : "hover:bg-gray-100 text-gray-900"
-              }`}
+              className={`transition-colors ${isDark ? "hover:bg-gray-800" : "hover:bg-gray-100"}`}
             >
               {isDark ? <SunIcon /> : <MoonIcon />}
             </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className={`md:hidden transition-colors ${
-                isDark ? "hover:bg-gray-800 text-white" : "hover:bg-gray-100 text-gray-900"
-              }`}
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
+            <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <XIcon /> : <MenuIcon />}
             </Button>
           </div>
         </div>
 
-        {/* Menú móvil */}
         {isMenuOpen && (
           <div className="md:hidden">
             <div
               className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t transition-colors ${
-                isDark ? "bg-gray-900 border-gray-700" : "bg-white border-gray-200"
+                isDark ? "bg-black border-gray-800" : "bg-white border-gray-200"
               }`}
             >
               <a
