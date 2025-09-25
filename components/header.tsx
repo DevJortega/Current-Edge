@@ -47,18 +47,20 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
 
   return (
     <header
-      className={`fixed top-0 w-full backdrop-blur z-50 border-b transition-colors duration-300 opacity-100 shadow-none bg-transparent text-transparent border-transparent ${
+      className={`fixed top-0 w-full backdrop-blur z-50 border-b transition-colors duration-300 ${
         isDark ? "bg-black/95 border-gray-800" : "bg-white/95 border-gray-200"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center text-popover-foreground rounded-full shadow-xl font-semibold text-lg justify-evenly gap-0 mx-0 my-0 px-3 py-0 w-auto h-14 border-2 opacity-100 border-transparent bg-slate-200">
-          <div className="flex items-center">{/* Logo and name moved to About section */}</div>
+        <div className="flex items-center justify-between h-14">
+          {/* LOGO Y NOMBRE (ya lo tienes en otra parte, aquí lo dejo vacío para no duplicar) */}
+          <div className="flex items-center">{/* Logo y nombre en sección About */}</div>
 
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* NAV PRINCIPAL */}
+          <nav className="hidden md:flex items-center space-x-8 font-medium">
             <a
               href="#inicio"
-              className={`transition-colors text-popover-foreground ${
+              className={`transition-colors ${
                 isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
               }`}
             >
@@ -66,7 +68,7 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
             </a>
             <a
               href="#about"
-              className={`transition-colors text-popover-foreground ${
+              className={`transition-colors ${
                 isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
               }`}
             >
@@ -74,7 +76,7 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
             </a>
             <a
               href="#equipo"
-              className={`transition-colors text-popover-foreground ${
+              className={`transition-colors ${
                 isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
               }`}
             >
@@ -82,7 +84,7 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
             </a>
             <a
               href="#producto"
-              className={`transition-colors text-popover-foreground ${
+              className={`transition-colors ${
                 isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
               }`}
             >
@@ -90,7 +92,7 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
             </a>
             <a
               href="#contacto"
-              className={`transition-colors text-popover-foreground ${
+              className={`transition-colors ${
                 isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
               }`}
             >
@@ -98,6 +100,7 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
             </a>
           </nav>
 
+          {/* BOTONES */}
           <div className="flex items-center space-x-2">
             <Button
               variant="ghost"
@@ -113,54 +116,53 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
           </div>
         </div>
 
+        {/* MENU MÓVIL */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div
-              className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t transition-colors ${
-                isDark ? "bg-black border-gray-800" : "bg-white border-gray-200"
+          <div
+            className={`md:hidden px-2 pt-2 pb-3 space-y-1 border-t transition-colors ${
+              isDark ? "bg-black border-gray-800" : "bg-white border-gray-200"
+            }`}
+          >
+            <a
+              href="#inicio"
+              className={`block px-3 py-2 transition-colors ${
+                isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
               }`}
             >
-              <a
-                href="#inicio"
-                className={`block px-3 py-2 transition-colors ${
-                  isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
-                }`}
-              >
-                Inicio
-              </a>
-              <a
-                href="#about"
-                className={`block px-3 py-2 transition-colors ${
-                  isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
-                }`}
-              >
-                Nosotros
-              </a>
-              <a
-                href="#equipo"
-                className={`block px-3 py-2 transition-colors ${
-                  isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
-                }`}
-              >
-                Equipo
-              </a>
-              <a
-                href="#producto"
-                className={`block px-3 py-2 transition-colors ${
-                  isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
-                }`}
-              >
-                Producto
-              </a>
-              <a
-                href="#contacto"
-                className={`block px-3 py-2 transition-colors ${
-                  isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
-                }`}
-              >
-                Contacto
-              </a>
-            </div>
+              Inicio
+            </a>
+            <a
+              href="#about"
+              className={`block px-3 py-2 transition-colors ${
+                isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
+              }`}
+            >
+              Nosotros
+            </a>
+            <a
+              href="#equipo"
+              className={`block px-3 py-2 transition-colors ${
+                isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
+              }`}
+            >
+              Equipo
+            </a>
+            <a
+              href="#producto"
+              className={`block px-3 py-2 transition-colors ${
+                isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
+              }`}
+            >
+              Producto
+            </a>
+            <a
+              href="#contacto"
+              className={`block px-3 py-2 transition-colors ${
+                isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
+              }`}
+            >
+              Contacto
+            </a>
           </div>
         )}
       </div>

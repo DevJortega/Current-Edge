@@ -13,7 +13,7 @@ export function Intro({ isDark }: IntroProps) {
       }`}
     >
       <div
-        className={`w-48 h-48 flex items-center justify-center mb-6 transition-colors text-popover-foreground underline opacity-100 rounded-full shadow-2xl border-primary bg-slate-50 ${
+        className={`w-48 h-48 flex items-center justify-center mb-6 transition-colors text-popover-foreground underline opacity-100 rounded-full border-primary bg-black shadow-2xl ${
           isDark
             ? "bg-blue-900/30 border-4 border-blue-400"
             : "bg-blue-50 border-4 border-blue-200"
