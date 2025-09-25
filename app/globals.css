@@ -41,21 +41,24 @@
     border-color: rgb(var(--border));
   }
 
-  body {
+  html, body {
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
     color: rgb(var(--foreground));
   }
 
   /* Modo claro */
-  body:not(.dark) {
+  html:not(.dark), body:not(.dark) {
     @apply bg-gradient-to-r from-blue-50 via-white to-blue-100;
   }
 
   /* Modo oscuro */
-  body.dark {
+  html.dark, body.dark {
     @apply bg-gradient-to-br from-gray-900 via-black to-gray-800;
   }
 }
+
 
 
 @layer utilities {
