@@ -47,18 +47,18 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
 
   return (
     <header
-      className={`fixed top-0 w-full backdrop-blur z-50 border-b transition-colors duration-300 opacity-100 shadow-none border-sidebar bg-transparent text-transparent ${
+      className={`fixed top-0 w-full backdrop-blur z-50 border-b transition-colors duration-300 opacity-100 shadow-none bg-transparent text-transparent border-transparent ${
         isDark ? "bg-black/95 border-gray-800" : "bg-white/95 border-gray-200"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center text-popover-foreground rounded-full shadow-xl border-slate-100 font-semibold text-lg justify-evenly gap-0 mx-0 my-0 px-3 py-0 w-auto h-14 border-2 opacity-100 bg-slate-100">
+        <div className="flex items-center text-popover-foreground rounded-full shadow-xl font-semibold text-lg justify-evenly gap-0 mx-0 my-0 px-3 py-0 w-auto h-14 border-2 opacity-100 border-transparent bg-slate-200">
           <div className="flex items-center">{/* Logo and name moved to About section */}</div>
 
           <nav className="hidden md:flex items-center space-x-8">
             <a
               href="#inicio"
-              className={`transition-colors ${
+              className={`transition-colors text-popover-foreground ${
                 isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
               }`}
             >
@@ -66,7 +66,7 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
             </a>
             <a
               href="#about"
-              className={`transition-colors ${
+              className={`transition-colors text-popover-foreground ${
                 isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
               }`}
             >
@@ -74,7 +74,7 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
             </a>
             <a
               href="#equipo"
-              className={`transition-colors ${
+              className={`transition-colors text-popover-foreground ${
                 isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
               }`}
             >
@@ -82,7 +82,7 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
             </a>
             <a
               href="#producto"
-              className={`transition-colors ${
+              className={`transition-colors text-popover-foreground ${
                 isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
               }`}
             >
@@ -90,7 +90,7 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
             </a>
             <a
               href="#contacto"
-              className={`transition-colors ${
+              className={`transition-colors text-popover-foreground ${
                 isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"
               }`}
             >
