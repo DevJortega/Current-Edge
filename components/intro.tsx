@@ -8,19 +8,19 @@ export function Intro({ isDark }: IntroProps) {
   return (
     <section
       id="inicio"
-      className={`py-20 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center transition-colors duration-300 ${
+      className={`py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center text-center transition-colors duration-300 text-background flex-col border-background border-none tracking-wider ${
         isDark ? "bg-gray-900" : "bg-white"
       }`}
     >
       <div
-        className={`w-48 h-48 rounded-full flex items-center justify-center mb-6 transition-colors border-background text-background bg-card ${
+        className={`w-48 h-48 flex items-center justify-center mb-6 transition-colors text-popover-foreground underline bg-gray-100 opacity-100 rounded-full shadow-2xl border-primary ${
           isDark
             ? "bg-blue-900/30 border-4 border-blue-400"
             : "bg-blue-50 border-4 border-blue-200"
         }`}
       >
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/current-edge-logo.png-qXDvFUiCSJbgeT7VYL7FZ32QGTn9bS.png"
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/current-edge-logo.png-UlxUpPrEyCo13h8wgQ7sHmoy2UuqPo.png"
           alt="Current Edge Logo"
           width={160}
           height={160}

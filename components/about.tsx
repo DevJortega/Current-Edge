@@ -73,15 +73,9 @@ export function About({ isDark }: AboutProps) {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
-            <div
-              className={`w-32 h-32 rounded-full border-4 flex items-center justify-center ${
-                isDark ? "border-blue-400 bg-blue-900/20 text-blue-400" : "border-blue-600 bg-blue-50 text-blue-600"
-              }`}
-            >
-              <LightningIcon />
-            </div>
+            
           </div>
-          <h1 className={`text-4xl font-bold mb-8 ${isDark ? "text-white" : "text-gray-900"}`}>Current Edge</h1>
+          
         </div>
 
         <div className="text-center mb-16">

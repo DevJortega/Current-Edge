@@ -26,14 +26,7 @@ export function Hero({ isDark }: HeroProps) {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-8">
           <div className="space-y-4">
-            <div
-              className={`inline-flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                isDark ? "bg-blue-900/30 text-blue-400" : "bg-blue-50 text-blue-600"
-              }`}
-            >
-              <ZapIcon />
-              <span>Innovación Tecnológica</span>
-            </div>
+            
             <h1
               className={`font-serif font-bold transition-colors text-4xl ${
                 isDark ? "text-white" : "text-gray-900"

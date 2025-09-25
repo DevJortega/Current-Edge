@@ -16,7 +16,7 @@
   --accent: 14 165 233;
   --accent-foreground: 248 250 252;
   --border: 226 232 240;
-  --input: 226 232 240;
+  --input: rgb(23, 23, 47);
   --ring: 59 130 246;
 }
 

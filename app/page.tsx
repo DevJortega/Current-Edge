@@ -41,21 +41,20 @@ export default function Home() {
 
   return (
     <main
-      className={`min-h-screen transition-colors duration-300 ${
-        isDark ? "bg-black text-white" : "bg-white text-gray-900"
-      }`}
-    >
-      {/* 👇 Primero mostramos el logo grande y el nombre */}
-      <Intro isDark={isDark} />
+  className={`min-h-screen transition-colors duration-500 ${
+    isDark
+      ? "bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white"
+      : "bg-gradient-to-r from-blue-50 via-white to-blue-100 text-gray-900"
+  }`}
+>
+  <Header isDark={isDark} toggleDarkMode={toggleDarkMode} />
+  <Intro isDark={isDark} />
+  <About isDark={isDark} />
+  <Team isDark={isDark} />
+  <Product isDark={isDark} />
+  <Contact isDark={isDark} />
+  <Footer />
+</main>
 
-      {/* 👇 Luego ya viene el header y el resto */}
-      <Header isDark={isDark} toggleDarkMode={toggleDarkMode} />
-      <Hero isDark={isDark} />
-      <About isDark={isDark} />
-      <Team isDark={isDark} />
-      <Product isDark={isDark} />
-      <Contact isDark={isDark} />
-      <Footer />
-    </main>
   )
 }
