@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
 
 const TargetIcon = () => (
   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +78,9 @@ export function About({ isDark }: AboutProps) {
             Sobre Current Edge
           </h2>
           <p className={`text-xl max-w-3xl mx-auto transition-colors ${isDark ? "text-gray-300" : "text-gray-600"}`}>
-            {"Somos un equipo de ingenieros especializados en electrónica analógica, comprometidos con el diseño \ny desarrollo de sistemas de medición de corriente de alta precisión y confiabilidad."}
+            {
+              "Somos un equipo de ingenieros especializados en electrónica analógica, comprometidos con el diseño \ny desarrollo de sistemas de medición de corriente de alta precisión y confiabilidad."
+            }
           </p>
         </div>
 
@@ -114,6 +117,25 @@ export function About({ isDark }: AboutProps) {
           ))}
         </div>
 
+        <div className="flex flex-col items-center justify-center my-16">
+          <div
+            className={`w-24 h-24 rounded-full flex items-center justify-center mb-4 transition-colors ${
+              isDark ? "bg-blue-900/30 border-2 border-blue-400" : "bg-blue-50 border-2 border-blue-200"
+            }`}
+          >
+            <Image
+              src={isDark ? "/images/current-edge-logo-dark.png" : "/images/current-edge-logo.png"}
+              alt="Current Edge Logo"
+              width={48}
+              height={48}
+              className="w-12 h-12 object-contain"
+            />
+          </div>
+          <h3 className={`font-serif font-bold text-2xl transition-colors ${isDark ? "text-white" : "text-gray-900"}`}>
+            Current Edge
+          </h3>
+        </div>
+
         <div
           className={`mt-16 rounded-lg p-8 shadow-sm transition-colors duration-300 ${
             isDark ? "bg-gray-800" : "bg-white"
@@ -128,13 +150,19 @@ export function About({ isDark }: AboutProps) {
           </h3>
           <div className={`prose prose-lg max-w-none transition-colors ${isDark ? "text-gray-300" : "text-gray-600"}`}>
             <p className="mb-4">
-              {"Current Edge se fundó con el propósito de desarrollar instrumentación de medición de \ncorriente de clase mundial, aplicando metodologías avanzadas de diseño analógico y \ntecnologías de precisión."}
+              {
+                "Current Edge se fundó con el propósito de desarrollar instrumentación de medición de \ncorriente de clase mundial, aplicando metodologías avanzadas de diseño analógico y \ntecnologías de precisión."
+              }
             </p>
             <p className="mb-4">
-              {"Especializados en el diseño de amplificadores operacionales propios y sistemas de \nmedición de alta precisión, hemos desarrollado soluciones que responden a las \ndemandas más exigentes del mercado industrial y científico."}
+              {
+                "Especializados en el diseño de amplificadores operacionales propios y sistemas de \nmedición de alta precisión, hemos desarrollado soluciones que responden a las \ndemandas más exigentes del mercado industrial y científico."
+              }
             </p>
             <p>
-              {"Nuestra experiencia en metodología EPICS y diseño analógico nos posiciona como \nlíderes en el desarrollo de instrumentos de medición confiables y exactos."}
+              {
+                "Nuestra experiencia en metodología EPICS y diseño analógico nos posiciona como \nlíderes en el desarrollo de instrumentos de medición confiables y exactos."
+              }
             </p>
           </div>
         </div>
