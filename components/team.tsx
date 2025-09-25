@@ -81,10 +81,10 @@ export function Team({ isDark }: TeamProps) {
   return (
     <section
       id="equipo"
-      className={`py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${isDark ? "bg-black" : "bg-white"}`}
+      className={`py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 bg-transparent text-transparent ${isDark ? "bg-black" : "bg-white"}`}
     >
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center space-y-4 mb-16">
+      <div className="container mx-auto max-w-6xl text-transparent bg-transparent">
+        <div className="text-center space-y-4 mb-16 bg-transparent text-transparent">
           <h2
             className={`font-serif font-bold text-3xl sm:text-4xl transition-colors ${
               isDark ? "text-white" : "text-gray-900"

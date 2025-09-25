@@ -8,7 +8,7 @@ export function Intro({ isDark }: IntroProps) {
   return (
     <section
       id="inicio"
-      className={`py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center text-center transition-colors duration-300 flex-col border-none tracking-wider border-transparent bg-slate-200 text-primary-foreground ${
+      className={`py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center text-center transition-colors duration-300 flex-col border-none tracking-wider border-transparent bg-transparent text-transparent ${
         isDark ? "bg-gray-900" : "bg-white"
       }`}
     >
@@ -20,7 +20,7 @@ export function Intro({ isDark }: IntroProps) {
         }`}
       >
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/current-edge-logo.png%281%29%281%29-CYUu5BKuEJkEn0aNnpgxIUzpSEOicq.png"
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/design-mode-images/current-edge-logo.png%281%29%282%29-JqdLwUgr5FbZmKxyhuB8A0Aa0O56So.png"
           alt="Current Edge Logo"
           width={160}
           height={160}

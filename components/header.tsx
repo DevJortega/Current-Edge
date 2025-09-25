@@ -47,7 +47,7 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
 
   return (
     <header
-      className={`fixed top-0 w-full backdrop-blur z-50 border-b transition-colors duration-300 opacity-100 bg-card shadow-none border-sidebar ${
+      className={`fixed top-0 w-full backdrop-blur z-50 border-b transition-colors duration-300 opacity-100 shadow-none border-sidebar bg-transparent text-transparent ${
         isDark ? "bg-black/95 border-gray-800" : "bg-white/95 border-gray-200"
       }`}
     >

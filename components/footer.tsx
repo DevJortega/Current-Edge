@@ -8,7 +8,7 @@ export default function Footer({ isDark = false }: FooterProps) {
   return (
     <footer
       id="contacto"
-      className={`${isDark ? "bg-gray-900" : "bg-gradient-to-r from-indigo-600 to-purple-600"} text-white py-12 px-4 sm:px-6 lg:px-8`}
+      className={`${isDark ? "bg-gray-900" : "bg-gradient-to-r from-indigo-600 to-purple-600"} text-white py-12 px-4 sm:px-6 lg:px-8 bg-transparent`}
     >
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
