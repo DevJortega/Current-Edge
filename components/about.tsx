@@ -79,8 +79,8 @@ export function About({ isDark }: AboutProps) {
         </div>
 
         <div className="text-center mb-16">
-          <h2 className={`text-3xl font-bold mb-6 font-sans text-blue-800 ${isDark ? "text-white" : "text-gray-900"}`}>Sobre Current Edge</h2>
-          <p className={`text-xl max-w-3xl mx-auto text-popover-foreground ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+          <h2 className={`font-bold mb-6 font-sans text-blue-800 text-5xl ${isDark ? "text-white" : "text-gray-900"}`}>Sobre Current Edge</h2>
+          <p className={`max-w-3xl mx-auto text-popover-foreground font-sans text-2xl ${isDark ? "text-gray-300" : "text-gray-600"}`}>
             Somos una empresa especializada en el diseño y desarrollo de instrumentos de medición de corriente eléctrica
             de alta precisión. Nuestro enfoque se centra en la innovación tecnológica y la excelencia en cada proyecto
             que emprendemos.

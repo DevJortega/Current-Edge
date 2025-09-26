@@ -90,7 +90,7 @@ export function Team({ isDark }: TeamProps) {
               isDark ? "text-white" : "text-gray-900"
             }`}
           >
-            Conoce a los Visionarios del Proyecto
+            Conoce a los visionarios del proyecto
           </h2>
           <p className={`text-xl max-w-3xl mx-auto transition-colors ${isDark ? "text-gray-300" : "text-gray-600"}`}>
             Nuestro equipo combina experiencia técnica con innovación, trabajando juntos para crear soluciones electrónicas.

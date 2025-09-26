@@ -18,10 +18,7 @@ const LinkedinIcon = () => (
 )
 
 const MailIcon = () => (
-  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12...z" />
-    <polyline points="22,6 12,13 2,6" />
-  </svg>
+  null
 )
 
 const PhoneIcon = () => (
@@ -60,10 +57,10 @@ export function Contact({ isDark }: ContactProps) {
     <section id="contacto" className={`py-20 px-4 sm:px-6 lg:px-8 ${isDark ? "bg-black" : "bg-white"}`}>
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-4 mb-16">
-          <h2 className={`font-serif font-bold text-3xl sm:text-4xl ${isDark ? "text-white" : "text-gray-900"}`}>
+          <h2 className={`font-bold text-3xl font-sans sm:text-5xl ${isDark ? "text-white" : "text-gray-900"}`}>
             Conectemos
           </h2>
-          <p className={`text-xl max-w-3xl mx-auto ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+          <p className={`max-w-3xl mx-auto text-2xl font-sans ${isDark ? "text-gray-300" : "text-gray-600"}`}>
             ¿Tienes preguntas sobre nuestro proyecto o quieres colaborar con nosotros? No dudes en contactarnos.
           </p>
         </div>
@@ -137,16 +134,7 @@ export function Contact({ isDark }: ContactProps) {
               <CardContent>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.href}
-                      className={`w-12 h-12 rounded-lg flex items-center justify-center transition-colors ${
-                        isDark ? "bg-gray-700 text-gray-400 hover:text-blue-400" : "bg-gray-100 text-gray-600 hover:text-blue-600"
-                      }`}
-                      aria-label={social.label}
-                    >
-                      <social.icon />
-                    </a>
+                    null
                   ))}
                 </div>
               </CardContent>
