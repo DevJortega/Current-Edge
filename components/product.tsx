@@ -109,10 +109,10 @@ export function Product({ isDark }: ProductProps) {
           <div className="space-y-6">
             <div>
               <Badge className="mb-4">Producto Principal</Badge>
-              <h3 className={`font-serif font-bold text-2xl mb-4 ${isDark ? "text-white" : "text-gray-900"}`}>
+              <h3 className={`font-serif font-bold text-2xl mb-4 text-left ${isDark ? "text-white" : "text-gray-900"}`}>
                 Amperimetrix v2.0
               </h3>
-              <p className={`leading-relaxed mb-6 ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+              <p className={`leading-relaxed mb-6 text-center ${isDark ? "text-gray-300" : "text-gray-600"}`}>
                 Su esencia y su nombre ("2.0") radican en que es la evolución natural de nuestro primer gran hito: el
                 diseño y construcción de nuestro propio Amplificador Operacional. Este Op-Amp, optimizado desde sus
                 transistores internos, es el corazón de Amperimetrix 2.0, proporcionando la base para una medición de
@@ -122,21 +122,7 @@ export function Product({ isDark }: ProductProps) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div
-                    className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 ${
-                      isDark ? "bg-blue-900/30 text-blue-400" : "bg-blue-100 text-blue-600"
-                    }`}
-                  >
-                    <feature.icon />
-                  </div>
-                  <div>
-                    <h4 className={`font-medium text-sm mb-1 ${isDark ? "text-white" : "text-gray-900"}`}>
-                      {feature.title}
-                    </h4>
-                    <p className={`text-xs ${isDark ? "text-gray-400" : "text-gray-600"}`}>{feature.description}</p>
-                  </div>
-                </div>
+                null
               ))}
             </div>
 
