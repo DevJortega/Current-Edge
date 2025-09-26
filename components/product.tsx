@@ -120,11 +120,7 @@ export function Product({ isDark }: ProductProps) {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {features.map((feature, index) => (
-                null
-              ))}
-            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">{features.map((feature, index) => null)}</div>
 
             <Button className="group">
               Ver documentación técnica
