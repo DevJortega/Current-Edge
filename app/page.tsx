@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react"
 import { Header } from "@/components/header"
-import { Intro } from "@/components/intro"   // 👈 este es el del logo circular
+import { Intro } from "@/components/intro" // 👈 este es el del logo circular
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Team } from "@/components/team"
 import { Product } from "@/components/product"
 import { Contact } from "@/components/contact"
-import Footer from "@/components/footer"
+import { Footer } from "@/components/footer"
 
 export default function Home() {
   const [isDark, setIsDark] = useState(false)
