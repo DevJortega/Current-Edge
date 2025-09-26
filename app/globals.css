@@ -4,7 +4,7 @@
 
 /* Variables */
 :root {
-  --background: 255 255 255;
+  --background: rgb(23, 32, 52);
   --foreground: 15 23 42;
   --primary: 59 130 246;
   --primary-foreground: 248 250 252;
@@ -50,11 +50,34 @@
   /* 🎨 Degradado modo claro */
   body {
     @apply bg-gradient-to-r from-blue-50 via-white to-blue-100;
+    background-attachment: fixed; /* Mantiene el degradado fijo */
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  /* 🌙 Degradado modo oscuro */
+  /* 🌙 Degradado modo oscuro (azulado elegante) */
   .dark body {
-    @apply bg-gradient-to-br from-gray-900 via-black to-gray-800;
+    @apply bg-gradient-to-r from-slate-900 via-gray-900 to-slate-800;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* 🔧 SOLUCIÓN: Hacer transparentes los elementos que sobrescriben el fondo */
+  main, 
+  section, 
+  div:not(.card):not(.modal):not(.dropdown):not(.bg-white):not(.bg-background),
+  article,
+  .container {
+    background-color: transparent !important;
+  }
+
+  /* Contenedor principal heredar el fondo */
+  #__next, 
+  .app,
+  main {
+    min-height: 100vh;
+    background: transparent;
   }
 }
 
@@ -91,5 +114,34 @@
   }
   .border-border {
     border-color: rgb(var(--border));
+  }
+
+  /* 🎯 Utilidades personalizadas para elementos que necesitan fondo */
+  .bg-card-light {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+  }
+  
+  .bg-card-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  /* Clase para elementos que SÍ deben mantener fondo blanco */
+  .force-bg-white {
+    background-color: white !important;
+  }
+
+  .dark .force-bg-white {
+    background-color: rgb(var(--background)) !important;
+  }
+
+  /* 🟡 Color amarillo para la palabra "corriente" en modo oscuro */
+  .text-highlight {
+    color: rgb(var(--foreground));
+  }
+
+  .dark .text-highlight {
+    color: #fbbf24; /* Amarillo dorado similar al de Current Edge */
   }
 }

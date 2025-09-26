@@ -13,7 +13,7 @@ export function Intro({ isDark }: IntroProps) {
       }`}
     >
       <div
-        className={`w-48 h-48 flex items-center justify-center mb-6 transition-colors text-popover-foreground underline opacity-100 rounded-full border-primary bg-black shadow-2xl ${
+        className={`w-48 h-48 flex items-center justify-center mb-6 transition-colors underline opacity-100 rounded-full bg-slate-50 shadow-2xl text-secondary-foreground ${
           isDark
             ? "bg-blue-900/30 border-4 border-blue-400"
             : "bg-blue-50 border-4 border-blue-200"
@@ -22,8 +22,8 @@ export function Intro({ isDark }: IntroProps) {
         <Image
           src={
             isDark
-              ? "/images/design-mode/current-edge-logo-dark.png" // 👈 tu logo para modo oscuro
-              : "/images/design-mode/current-edge-logo.png" // 👈 tu logo para modo claro
+              ? "/images/design-mode/current-edge-logo-dark.png" // 👈 logo modo oscuro
+              : "/images/design-mode/current-edge-logo.png" // 👈 logo modo claro
           }
           alt="Current Edge Logo"
           width={160}
@@ -32,8 +32,8 @@ export function Intro({ isDark }: IntroProps) {
         />
       </div>
       <h1
-        className={`font-serif font-bold text-4xl sm:text-5xl transition-colors ${
-          isDark ? "text-white" : "text-gray-900"
+        className={`sm:text-5xl transition-colors bg-transparent text-5xl font-sans font-bold text-yellow-400 ${
+          isDark ? "text-white" : "text-blue-700"
         }`}
       >
         Current Edge
@@ -43,9 +43,7 @@ export function Intro({ isDark }: IntroProps) {
           isDark ? "text-gray-300" : "text-gray-600"
         }`}
       >
-        Somos un equipo de ingenieros especializados en electrónica analógica,
-        comprometidos con el diseño y desarrollo de sistemas de medición de
-        corriente de alta precisión y confiabilidad.
+        {""}
       </p>
     </section>
   )
