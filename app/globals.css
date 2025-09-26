@@ -55,12 +55,17 @@
     background-size: cover;
   }
 
-  /* 🌙 Degradado modo oscuro (azulado elegante) */
+  /* 🌙 Degradado modo oscuro con difuminado suave */
   .dark body {
-    @apply bg-gradient-to-r from-slate-900 via-gray-900 to-slate-800;
+    background: 
+      radial-gradient(ellipse at 25% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 75% 80%, rgba(29, 78, 216, 0.12) 0%, transparent 60%),
+      radial-gradient(ellipse at 50% 50%, rgba(30, 58, 138, 0.08) 0%, transparent 70%),
+      linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 45%, #1e293b 65%, #0f172a 85%, #1e293b 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 150% 120%, 140% 110%, 160% 130%, cover;
+    background-position: top left, bottom right, center, center;
   }
 
   /* 🔧 SOLUCIÓN: Hacer transparentes los elementos que sobrescriben el fondo */
@@ -143,5 +148,17 @@
 
   .dark .text-highlight {
     color: #fbbf24; /* Amarillo dorado similar al de Current Edge */
+  }
+
+  /* 🔷 Navbar con fondo azul en modo oscuro */
+  .navbar-dark {
+    background: rgba(30, 64, 175, 0.9); /* Azul similar al degradado */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  }
+
+  /* 🟡 Borde amarillo para el logo en modo oscuro */
+  .logo-border-dark {
+    stroke: #fbbf24 !important; /* Amarillo dorado */
   }
 }

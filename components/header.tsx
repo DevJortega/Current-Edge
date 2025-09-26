@@ -47,26 +47,29 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 border-b transition-colors duration-300 
-      backdrop-blur-md bg-white/60 dark:bg-black/60 border-transparent`}
+      className={`fixed top-0 w-full z-50 border-b transition-colors duration-300 backdrop-blur-md border-transparent ${
+        isDark 
+          ? "bg-slate-800/85 border-slate-700/30" 
+          : "bg-white/60"
+      }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-evenly gap-0 px-3 h-14 font-semibold text-lg shadow-lg rounded-xl">
+        <div className="flex items-center justify-evenly gap-0 px-3 h-14 font-semibold text-lg shadow-2xl rounded-2xl border-dotted">
           {/* Links */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#inicio" className={`${isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"}`}>
+            <a href="#inicio" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}>
               Inicio
             </a>
-            <a href="#about" className={`${isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"}`}>
+            <a href="#about" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}>
               Nosotros
             </a>
-            <a href="#equipo" className={`${isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"}`}>
+            <a href="#equipo" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}>
               Equipo
             </a>
-            <a href="#producto" className={`${isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"}`}>
+            <a href="#producto" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}>
               Producto
             </a>
-            <a href="#contacto" className={`${isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"}`}>
+            <a href="#contacto" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}>
               Contacto
             </a>
           </nav>
@@ -77,7 +80,7 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
               variant="ghost"
               size="icon"
               onClick={toggleDarkMode}
-              className={`transition-colors ${isDark ? "hover:bg-gray-800" : "hover:bg-gray-100"}`}
+              className={`transition-colors ${isDark ? "hover:bg-slate-700/50" : "hover:bg-gray-100"}`}
             >
               {isDark ? <SunIcon /> : <MoonIcon />}
             </Button>
@@ -90,20 +93,22 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
         {/* Menú móvil */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/80 dark:bg-black/80 backdrop-blur-md`}>
-              <a href="#inicio" className={`${isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
+            <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 backdrop-blur-md ${
+              isDark ? "bg-slate-800/85" : "bg-white/80"
+            }`}>
+              <a href="#inicio" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
                 Inicio
               </a>
-              <a href="#about" className={`${isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
+              <a href="#about" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
                 Nosotros
               </a>
-              <a href="#equipo" className={`${isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
+              <a href="#equipo" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
                 Equipo
               </a>
-              <a href="#producto" className={`${isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
+              <a href="#producto" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
                 Producto
               </a>
-              <a href="#contacto" className={`${isDark ? "text-white hover:text-blue-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
+              <a href="#contacto" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
                 Contacto
               </a>
             </div>

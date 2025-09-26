@@ -32,7 +32,7 @@ export function Hero({ isDark }: HeroProps) {
                 isDark ? "text-white" : "text-gray-900"
               }`}
             >
-              Innovando el futuro de la medición de <span className={isDark ? "text-blue-400" : "text-blue-600"}>corriente</span>
+              Innovando el futuro de la medición de <span className={isDark ? "text-yellow-400" : "text-blue-600"}>corriente</span>
             </h1>
             <p
               className={`text-xl max-w-3xl mx-auto leading-relaxed transition-colors text-popover-foreground text-center font-sans ${

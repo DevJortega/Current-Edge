@@ -15,7 +15,7 @@ export function Intro({ isDark }: IntroProps) {
       <div
         className={`w-48 h-48 flex items-center justify-center mb-6 transition-colors underline opacity-100 rounded-full bg-slate-50 shadow-2xl text-secondary-foreground ${
           isDark
-            ? "bg-blue-900/30 border-4 border-blue-400"
+            ? "bg-blue-900/30 border-4 border-yellow-400"
             : "bg-blue-50 border-4 border-blue-200"
         }`}
       >
@@ -32,8 +32,8 @@ export function Intro({ isDark }: IntroProps) {
         />
       </div>
       <h1
-        className={`sm:text-5xl transition-colors bg-transparent text-5xl font-sans font-bold text-yellow-400 ${
-          isDark ? "text-white" : "text-blue-700"
+        className={`sm:text-5xl transition-colors bg-transparent text-5xl font-sans font-bold ${
+          isDark ? "text-yellow-400" : "text-blue-700"
         }`}
       >
         Current Edge
