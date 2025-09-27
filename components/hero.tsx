@@ -44,20 +44,24 @@ export function Hero({ isDark }: HeroProps) {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="group">
-              Conoce nuestro producto
-              <ArrowRightIcon />
+            <Button size="lg" className="group text-lg font-semibold px-8 py-4 h-auto" asChild>
+              <a href="#producto">
+                Descubre nuestra tecnología
+                <ArrowRightIcon />
+              </a>
             </Button>
-            <Button variant="outline" size="lg">
-              Ver el equipo
+            <Button variant="outline" size="lg" className="text-lg font-semibold px-8 py-4 h-auto" asChild>
+              <a href="#equipo">
+                Conoce al equipo
+              </a>
             </Button>
           </div>
 
           <div className="mb-0 mt-12 ml-0 mr-0 px-6 py-11 border-0 bg-transparent text-transparent border-transparent">
             <img
-              src="/images/design-mode/AMPERIMETRO.png"
+              src="/images/design-mode/AMPERIMETRO-.png"
               alt="Circuito electrónico moderno"
-              className="rounded-lg shadow-2xl max-w-full h-auto text-xs mx-auto my-0 px-0 py-0 opacity-100 w-8/12"
+              className="rounded-lg max-w-full h-auto text-xs mx-auto my-0 px-0 py-0 opacity-100 w-8/12 bg-transparent border-none border-transparent shadow-none"
             />
           </div>
         </div>
