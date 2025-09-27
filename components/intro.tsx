@@ -13,7 +13,7 @@ export function Intro({ isDark }: IntroProps) {
       }`}
     >
       <div
-        className={`w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 flex items-center justify-center transition-colors underline opacity-100 rounded-full bg-slate-50 shadow-2xl text-secondary-foreground tracking-normal flex-col mt-3 mb-6 ml-2.5 ${
+        className={`w-52 h-52 md:w-60 md:h-60 lg:w-64 lg:h-64 flex items-center justify-center transition-colors underline opacity-100 rounded-full bg-slate-50 shadow-2xl text-secondary-foreground tracking-normal flex-col mt-3 mb-6 ml-2.5 ${
           isDark
             ? "bg-blue-900/30 border-4 border-yellow-400"
             : "bg-blue-50 border-4 border-blue-200"
@@ -26,13 +26,13 @@ export function Intro({ isDark }: IntroProps) {
               : "/images/design-mode/current-edge-logo.png" // 👈 logo modo claro
           }
           alt="Current Edge Logo"
-          width={220}
-          height={220}
-          className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-contain"
+          width={190}
+          height={190}
+          className="w-40 h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 object-contain"
         />
       </div>
       <h1
-        className={`transition-colors bg-transparent font-sans font-bold text-6xl md:text-7xl lg:text-8xl ${
+        className={`transition-colors bg-transparent font-sans font-bold text-6xl md:text-7xl ${
           isDark ? "text-yellow-400" : "text-blue-700"
         }`}
       >
