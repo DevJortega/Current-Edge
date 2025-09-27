@@ -69,18 +69,19 @@ export function About({ isDark }: AboutProps) {
   ]
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="about" className={`py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+      isDark ? "bg-gray-900" : "bg-gray-50"
+    }`}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <div className="flex justify-center mb-6">
-            
-          </div>
-          
-        </div>
-
-        <div className="text-center mb-16">
-          <h2 className={`font-bold mb-6 font-sans text-blue-800 text-5xl ${isDark ? "text-white" : "text-gray-900"}`}>Sobre Current Edge</h2>
-          <p className={`max-w-3xl mx-auto text-popover-foreground font-sans text-2xl ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+        <div className="text-center mb-10">
+          <h2 className={`font-bold mb-4 font-sans text-5xl transition-colors ${
+            isDark ? "text-yellow-400" : "text-blue-600"
+          }`}>
+            Sobre Current Edge
+          </h2>
+          <p className={`max-w-3xl mx-auto font-sans text-2xl transition-colors ${
+            isDark ? "text-gray-300" : "text-gray-600"
+          }`}>
             Somos una empresa especializada en el diseño y desarrollo de instrumentos de medición de corriente eléctrica
             de alta precisión. Nuestro enfoque se centra en la innovación tecnológica y la excelencia en cada proyecto
             que emprendemos.
