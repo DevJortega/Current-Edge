@@ -44,13 +44,21 @@ export function Hero({ isDark }: HeroProps) {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="group text-lg font-semibold px-8 py-4 h-auto" asChild>
+            <Button size="lg" className={`group text-lg font-semibold px-8 py-4 h-auto transition-colors ${
+              isDark 
+                ? "bg-yellow-500 hover:bg-yellow-600 text-black" 
+                : "bg-blue-600 hover:bg-blue-700 text-white"
+            }`} asChild>
               <a href="#producto">
                 Descubre nuestra tecnología
                 <ArrowRightIcon />
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="text-lg font-semibold px-8 py-4 h-auto" asChild>
+            <Button variant="outline" size="lg" className={`text-lg font-semibold px-8 py-4 h-auto transition-colors ${
+              isDark 
+                ? "border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black" 
+                : "border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+            }`} asChild>
               <a href="#equipo">
                 Conoce al equipo
               </a>
@@ -61,7 +69,7 @@ export function Hero({ isDark }: HeroProps) {
             <img
               src="/images/design-mode/AMPERIMETRO-.png"
               alt="Circuito electrónico moderno"
-              className="rounded-lg max-w-full h-auto text-xs mx-auto my-0 px-0 py-0 opacity-100 w-8/12 bg-transparent border-none border-transparent shadow-none"
+              className="rounded-lg shadow-2xl max-w-full h-auto text-xs mx-auto my-0 px-0 py-0 opacity-100 w-8/12"
             />
           </div>
         </div>

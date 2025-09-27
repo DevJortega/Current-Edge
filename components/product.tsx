@@ -119,7 +119,11 @@ export function Product({ isDark }: ProductProps) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">{features.map((feature, index) => null)}</div>
 
-            <Button className="group" asChild>
+            <Button className={`group transition-colors ${
+              isDark 
+                ? "bg-yellow-500 hover:bg-yellow-600 text-black" 
+                : "bg-blue-600 hover:bg-blue-700 text-white"
+            }`} asChild>
               <a href="#especificaciones">
                 Ver documentación técnica
                 <ArrowRightIcon />
