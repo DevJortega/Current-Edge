@@ -82,7 +82,7 @@ export function Product({ isDark }: ProductProps) {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-4 mb-16">
           <h2 className={`font-bold font-sans text-4xl transition-colors ${isDark ? "text-white" : "text-gray-900"}`}>
-            Explora nuestro <span className={isDark ? "text-yellow-400" : "text-blue-600"}>Amperimetrix v.2.0</span>   
+            Explora nuestro <span className={isDark ? "text-yellow-400" : "text-blue-600"}>amperimetrix v.2.0</span>   
           </h2>
           <p className={`max-w-3xl mx-auto text-center font-sans text-2xl transition-colors ${isDark ? "text-gray-300" : "text-gray-600"}`}>
             Presentamos nuestro sistema de medición de corriente de alta precisión que integra amplificadores
@@ -108,7 +108,7 @@ export function Product({ isDark }: ProductProps) {
 
           <div className="space-y-6">
             <div>
-              <Badge className="mb-4"></Badge>
+              <Badge className="mb-4">Producto Principal</Badge>
               <h3 className={`font-bold mb-4 text-left font-sans text-3xl transition-colors ${isDark ? "text-yellow-400" : "text-blue-600"}`}>
                 Amperimetrix v2.0
               </h3>
@@ -119,14 +119,16 @@ export function Product({ isDark }: ProductProps) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">{features.map((feature, index) => null)}</div>
 
-            <Button className="group">
-              Ver documentación técnica
-              <ArrowRightIcon />
+            <Button className="group" asChild>
+              <a href="#especificaciones">
+                Ver documentación técnica
+                <ArrowRightIcon />
+              </a>
             </Button>
           </div>
         </div>
 
-        <Card className={isDark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-200"}>
+        <Card id="especificaciones" className={isDark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-200"}>
           <CardHeader>
             <CardTitle className={`font-serif ${isDark ? "text-white" : "text-gray-900"}`}>
               Especificaciones técnicas
