@@ -28,7 +28,7 @@ export function Hero({ isDark }: HeroProps) {
           <div className="space-y-4">
             
             <h1
-              className={`font-bold transition-colors text-4xl font-sans px-0 py-0 mx-1.5 my-0 border-0 text-center ${
+              className={`font-bold transition-colors text-4xl font-sans px-0 py-0 mx-1.5 my-0 border-0 text-center tracking-normal leading-3 ${
                 isDark ? "text-white" : "text-gray-900"
               }`}
             >
@@ -55,9 +55,9 @@ export function Hero({ isDark }: HeroProps) {
 
           <div className="mb-0 mt-12 ml-0 mr-0 px-6 py-11 border-0 bg-transparent text-transparent border-transparent">
             <img
-              src="/images/design-mode/WhatsApp%20Image%202025-09-05%20at%201.39.59%20PM(1).jpeg"
+              src="/images/design-mode/AMPERIMETRO.png"
               alt="Circuito electrónico moderno"
-              className="rounded-lg shadow-2xl max-w-full h-auto text-xs mx-auto my-0 px-0 py-0 w-9/12"
+              className="rounded-lg shadow-2xl max-w-full h-auto text-xs mx-auto my-0 px-0 py-0 opacity-100 w-8/12"
             />
           </div>
         </div>
