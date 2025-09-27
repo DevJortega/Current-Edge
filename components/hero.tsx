@@ -69,7 +69,7 @@ export function Hero({ isDark }: HeroProps) {
             <img
               src="/images/design-mode/AMPERIMETRO-.png"
               alt="Circuito electrónico moderno"
-              className="rounded-lg shadow-2xl max-w-full h-auto text-xs mx-auto my-0 px-0 py-0 opacity-100 w-8/12"
+              className="rounded-lg max-w-full h-auto text-xs mx-auto my-0 px-0 py-0 opacity-100 w-8/12 shadow-none"
             />
           </div>
         </div>
