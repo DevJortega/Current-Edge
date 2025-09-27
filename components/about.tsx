@@ -69,15 +69,14 @@ export function About({ isDark }: AboutProps) {
   ]
 
   return (
-    <section id="about" className={`py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+    <section id="about" className={`py-8 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
       isDark ? "bg-gray-900" : "bg-gray-50"
     }`}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
-          <h2 className={`font-bold mb-4 font-sans text-5xl transition-colors ${
-            isDark ? "text-yellow-400" : "text-blue-600"
-          }`}>
-            Sobre Current Edge
+          <h2 className={`font-bold mb-4 font-sans text-5xl transition-colors`}>
+            <span className={isDark ? "text-white" : "text-black"}>Sobre </span>
+            <span className={isDark ? "text-yellow-400" : "text-blue-600"}>Current Edge</span>
           </h2>
           <p className={`max-w-3xl mx-auto font-sans text-2xl transition-colors ${
             isDark ? "text-gray-300" : "text-gray-600"
