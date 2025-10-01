@@ -48,43 +48,61 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
   return (
     <header
       className={`fixed top-0 w-full z-50 border-b transition-colors duration-300 backdrop-blur-md border-transparent ${
-        isDark 
-          ? "bg-slate-800/85 border-slate-700/30" 
-          : "bg-white/60"
+        isDark ? "bg-slate-800/85 border-slate-700/30" : "bg-white/60"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-evenly gap-0 px-3 h-14 font-semibold text-lg shadow-2xl rounded-2xl border-dotted">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between md:justify-evenly gap-2 sm:gap-4 px-2 sm:px-3 h-12 sm:h-14 font-semibold text-base sm:text-lg shadow-2xl rounded-2xl border-dotted">
           {/* Links */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#inicio" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}>
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
+            <a
+              href="#inicio"
+              className={`text-sm lg:text-base ${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}
+            >
               Inicio
             </a>
-            <a href="#about" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}>
+            <a
+              href="#about"
+              className={`text-sm lg:text-base ${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}
+            >
               Nosotros
             </a>
-            <a href="#equipo" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}>
+            <a
+              href="#equipo"
+              className={`text-sm lg:text-base ${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}
+            >
               Equipo
             </a>
-            <a href="#producto" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}>
+            <a
+              href="#producto"
+              className={`text-sm lg:text-base ${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}
+            >
               Producto
             </a>
-            <a href="#contacto" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}>
+            <a
+              href="#contacto"
+              className={`text-sm lg:text-base ${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"}`}
+            >
               Contacto
             </a>
           </nav>
 
           {/* Botones */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1 sm:space-x-2">
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleDarkMode}
-              className={`transition-colors ${isDark ? "hover:bg-slate-700/50" : "hover:bg-gray-100"}`}
+              className={`transition-colors h-8 w-8 sm:h-10 sm:w-10 ${isDark ? "hover:bg-slate-700/50" : "hover:bg-gray-100"}`}
             >
               {isDark ? <SunIcon /> : <MoonIcon />}
             </Button>
-            <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden h-8 w-8 sm:h-10 sm:w-10"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
               {isMenuOpen ? <XIcon /> : <MenuIcon />}
             </Button>
           </div>
@@ -93,22 +111,44 @@ export function Header({ isDark, toggleDarkMode }: HeaderProps) {
         {/* Menú móvil */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 backdrop-blur-md ${
-              isDark ? "bg-slate-800/85" : "bg-white/80"
-            }`}>
-              <a href="#inicio" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
+            <div
+              className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 backdrop-blur-md rounded-b-lg ${
+                isDark ? "bg-slate-800/85" : "bg-white/80"
+              }`}
+            >
+              <a
+                href="#inicio"
+                className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2 text-sm sm:text-base`}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Inicio
               </a>
-              <a href="#about" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
+              <a
+                href="#about"
+                className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2 text-sm sm:text-base`}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Nosotros
               </a>
-              <a href="#equipo" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
+              <a
+                href="#equipo"
+                className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2 text-sm sm:text-base`}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Equipo
               </a>
-              <a href="#producto" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
+              <a
+                href="#producto"
+                className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2 text-sm sm:text-base`}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Producto
               </a>
-              <a href="#contacto" className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2`}>
+              <a
+                href="#contacto"
+                className={`${isDark ? "text-white hover:text-yellow-400" : "text-gray-900 hover:text-blue-600"} block px-3 py-2 text-sm sm:text-base`}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Contacto
               </a>
             </div>

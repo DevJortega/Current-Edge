@@ -69,25 +69,30 @@ export function About({ isDark }: AboutProps) {
   ]
 
   return (
-    <section id="about" className={`py-8 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
-      isDark ? "bg-gray-900" : "bg-gray-50"
-    }`}>
+    <section
+      id="about"
+      className={`py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+        isDark ? "bg-gray-900" : "bg-gray-50"
+      }`}
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-10">
-          <h2 className={`font-bold mb-4 font-sans text-5xl transition-colors`}>
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <h2 className={`font-bold mb-3 sm:mb-4 font-sans text-3xl sm:text-4xl md:text-5xl transition-colors`}>
             <span className={isDark ? "text-white" : "text-black"}>Sobre </span>
             <span className={isDark ? "text-yellow-400" : "text-blue-600"}>Current Edge</span>
           </h2>
-          <p className={`max-w-3xl mx-auto font-sans text-2xl transition-colors ${
-            isDark ? "text-gray-300" : "text-gray-600"
-          }`}>
+          <p
+            className={`max-w-3xl mx-auto font-sans text-base sm:text-lg md:text-xl lg:text-2xl px-2 transition-colors ${
+              isDark ? "text-gray-300" : "text-gray-600"
+            }`}
+          >
             Somos una empresa especializada en el diseño y desarrollo de instrumentos de medición de corriente eléctrica
             de alta precisión. Nuestro enfoque se centra en la innovación tecnológica y la excelencia en cada proyecto
             que emprendemos.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {features.map((feature, index) => (
             <Card
               key={index}
@@ -95,18 +100,22 @@ export function About({ isDark }: AboutProps) {
                 isDark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-200"
               } hover:shadow-lg transition-shadow duration-300`}
             >
-              <CardContent className="p-6 text-center">
+              <CardContent className="p-4 sm:p-6 text-center">
                 <div
-                  className={`inline-flex items-center justify-center w-12 h-12 rounded-lg mb-4 ${
+                  className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg mb-3 sm:mb-4 ${
                     isDark ? "bg-blue-900 text-blue-400" : "bg-blue-100 text-blue-600"
                   }`}
                 >
                   <feature.icon />
                 </div>
-                <h3 className={`text-xl font-semibold mb-3 ${isDark ? "text-white" : "text-gray-900"}`}>
+                <h3
+                  className={`text-lg sm:text-xl font-semibold mb-2 sm:mb-3 ${isDark ? "text-white" : "text-gray-900"}`}
+                >
                   {feature.title}
                 </h3>
-                <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>{feature.description}</p>
+                <p className={`text-sm sm:text-base ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+                  {feature.description}
+                </p>
               </CardContent>
             </Card>
           ))}
