@@ -25,7 +25,7 @@ export function Product({ isDark }: ProductProps) {
           <h2
             className={`font-bold font-sans text-2xl sm:text-3xl md:text-4xl transition-colors ${isDark ? "text-white" : "text-gray-900"}`}
           >
-            Explora nuestro <span className={isDark ? "text-yellow-400" : "text-blue-600"}>amperimetrix v.1.0</span>
+            Explora nuestro <span className={isDark ? "text-yellow-400" : "text-blue-600"}>amperimetrix v 1.0</span>
           </h2>
           
           {/* 👇 DESCRIPCIÓN PRINCIPAL - Cambia aquí */}
@@ -59,7 +59,7 @@ export function Product({ isDark }: ProductProps) {
               <h3
                 className={`font-bold mb-3 sm:mb-4 text-left font-sans text-2xl sm:text-3xl transition-colors ${isDark ? "text-yellow-400" : "text-blue-600"}`}
               >
-                Amperimetrix v1.0
+                Amperimetrix v 1.0
               </h3>
               
               {/* 👇 DESCRIPCIÓN DETALLADA - Cambia aquí */}
@@ -109,103 +109,88 @@ export function Product({ isDark }: ProductProps) {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 font-medium font-sans text-sm sm:text-base md:text-lg ${isDark ? "text-white" : "text-gray-900"}`}
-                    >
-                      Modelo
-                    </td>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base md:text-lg font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}
-                    >
-                      Amperimetrix 2.0
-                    </td>
-                  </tr>
-                  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 font-medium font-sans text-sm sm:text-base md:text-lg ${isDark ? "text-white" : "text-gray-900"}`}
-                    >
-                      Rango de medición
-                    </td>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base md:text-lg font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}
-                    >
-                      10 A - 15 A
-                    </td>
-                  </tr>
-                  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 font-medium font-sans text-sm sm:text-base md:text-lg ${isDark ? "text-white" : "text-gray-900"}`}
-                    >
-                      Núcleo de procesamiento
-                    </td>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base md:text-lg font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}
-                    >
-                      Op-Amp personalizado (diseño propio)
-                    </td>
-                  </tr>
-                  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 font-medium text-sm sm:text-base md:text-lg ${isDark ? "text-white" : "text-gray-900"}`}
-                    >
-                      Topología
-                    </td>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base md:text-lg font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}
-                    >
-                      Configuración con transistores PNP/NPN
-                    </td>
-                  </tr>
-                  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 font-medium text-sm sm:text-base md:text-lg ${isDark ? "text-white" : "text-gray-900"}`}
-                    >
-                      Precisión
-                    </td>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base md:text-lg font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}
-                    >
-                      ±10% del fondo de escala
-                    </td>
-                  </tr>
-                  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 font-medium text-sm sm:text-base md:text-lg ${isDark ? "text-white" : "text-gray-900"}`}
-                    >
-                      Ancho de banda
-                    </td>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base md:text-lg font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}
-                    >
-                      180 kHz
-                    </td>
-                  </tr>
-                  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 font-medium text-sm sm:text-base md:text-lg ${isDark ? "text-white" : "text-gray-900"}`}
-                    >
-                      Entrada
-                    </td>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base md:text-lg font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}
-                    >
-                      5 V
-                    </td>
-                  </tr>
-                  <tr>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 font-medium text-sm sm:text-base md:text-lg ${isDark ? "text-white" : "text-gray-900"}`}
-                    >
-                      Salida
-                    </td>
-                    <td
-                      className={`py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base md:text-lg font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}
-                    >
-                      0-12V
-                    </td>
-                  </tr>
-                </tbody>
+  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium font-sans text-sm sm:text-base md:text-lg ${isDark ? "text-white" : "text-gray-900"}`}>
+      Modelo
+    </td>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base md:text-lg font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+      Amperimetrix v1.0
+    </td>
+  </tr>
+
+  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
+      Sensor de corriente
+    </td>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+      WCS1900 (sensor Hall lineal, ±20 A, 60 mV/A)
+    </td>
+  </tr>
+
+  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
+      Rango de medición
+    </td>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+      15 A – 20 A
+    </td>
+  </tr>
+
+  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
+      Núcleo de procesamiento
+    </td>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+      Op-Amp personalizado (diseño propio)
+    </td>
+  </tr>
+
+  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
+      Arquitectura del circuito
+    </td>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+      Acondicionamiento analógico con amplificación, filtrado RC y salida escalada 0–12V
+    </td>
+  </tr>
+
+  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
+      Topología
+    </td>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+      Configuración con transistores PNP/NPN
+    </td>
+  </tr>
+
+  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
+      Ancho de banda
+    </td>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+      23 kHz (sensor) / 180 kHz (etapa de salida)
+    </td>
+  </tr>
+
+  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
+      Entrada
+    </td>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+      5 V
+    </td>
+  </tr>
+
+  <tr>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
+      Salida
+    </td>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+      0–12 V
+    </td>
+  </tr>
+</tbody>
+
               </table>
             </div>
           </CardContent>
