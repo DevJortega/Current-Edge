@@ -27,56 +27,55 @@ interface TeamProps {
 
 export function Team({ isDark }: TeamProps) {
   const teamMembers = [
-    {
-      name: "Darwin Díaz",
-      role: "ARCHIVIST",
-      description: "Especialista en diseño de circuitos y gestión de proyectos electrónicos.",
-      image: "/professional-woman-engineer.png",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "dherrerad@uninorte.edu.co",
-      },
-      skills: ["Circuitos", "Gestión", "Electrónica"],
+  {
+    name: "Darwin Díaz",
+    role: "ARCHIVIST",
+    description: "Especialista en diseño de circuitos y gestión de proyectos electrónicos.",
+    image: "/images/team/darwin.jpg", // 👈 Cambia aquí
+    social: {
+      github: "#",
+      linkedin: "#",
+      email: "dherrerad@uninorte.edu.co",
     },
-    {
-      name: "Laura Guerrero",
-      role: "COM OFFICER",
-      description: "Experta en comunicación y coordinación de equipos de ingeniería.",
-      image: "/professional-engineer-circuit-boards.png",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "lcanoles@uninorte.edu.co",
-      },
-      skills: ["Comunicación", "Hardware", "Embebidos"],
+    skills: ["Circuitos", "Gestión", "Electrónica"],
+  },
+  {
+    name: "Laura Guerrero",
+    role: "COM OFFICER",
+    description: "Experta en comunicación y coordinación de equipos de ingeniería.",
+    image: "/images/team/laura.jpg", // 👈 Cambia aquí
+    social: {
+      github: "#",
+      linkedin: "#",
+      email: "lcanoles@uninorte.edu.co",
     },
-    {
-      name: "Kenneth Lascarro",
-      role: "R & F MANAGER",
-      description: "Encargado de investigación y pruebas en proyectos electrónicos.",
-      image: "/woman-programmer-electronics.png",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "kennethl@uninorte.edu.co",
-      },
-      skills: ["Investigación", "Pruebas", "Validación"],
+    skills: ["Comunicación", "Hardware", "Embebidos"],
+  },
+  {
+    name: "Kenneth Lascarro",
+    role: "R & F MANAGER",
+    description: "Encargado de investigación y pruebas en proyectos electrónicos.",
+    image: "/images/team/kenneth.jpg", // 👈 Cambia aquí
+    social: {
+      github: "#",
+      linkedin: "#",
+      email: "kennethl@uninorte.edu.co",
     },
-    {
-      name: "Jorge Ortega",
-      role: "DESIGN LEADER",
-      description: "Líder en diseño y optimización de hardware electrónico.",
-      image: "/placeholder-39ipw.png",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "janillom.@uninorte.edu.co",
-      },
-      skills: ["Diseño", "Optimización", "Hardware"],
+    skills: ["Investigación", "Pruebas", "Validación"],
+  },
+  {
+    name: "Jorge Ortega",
+    role: "DESIGN LEADER",
+    description: "Líder en diseño y optimización de hardware electrónico.",
+    image: "/images/team/jorge.jpg", // 👈 Cambia aquí
+    social: {
+      github: "#",
+      linkedin: "#",
+      email: "janillom.@uninorte.edu.co",
     },
-  ]
-
+    skills: ["Diseño", "Optimización", "Hardware"],
+  },
+]
   return (
     <section
       id="equipo"
