@@ -26,23 +26,16 @@ export function Hero({ isDark }: HeroProps) {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-6 sm:space-y-8">
           {/* Título */}
-          <h2
-            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold transition-colors ${
-              isDark ? "text-yellow-400" : "text-blue-600"
+          <h1
+            className={`font-bold transition-colors text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans px-2 sm:px-4 py-0 mx-1.5 my-0 border-0 text-center tracking-normal leading-tight sm:leading-normal ${
+              isDark ? "text-white" : "text-gray-900"
             }`}
           >
-            Current Edge
-          </h2>
+            Innovando el futuro de la medición de{" "}
+            <span className={isDark ? "text-yellow-400" : "text-blue-600"}>corriente</span>
+          </h1>
 
           <div className="space-y-4">
-            <h1
-              className={`font-bold transition-colors text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans px-2 sm:px-4 py-0 mx-1.5 my-0 border-0 text-center tracking-normal leading-tight sm:leading-normal ${
-                isDark ? "text-white" : "text-gray-900"
-              }`}
-            >
-              Innovando el futuro de la medición de{" "}
-              <span className={isDark ? "text-yellow-400" : "text-blue-600"}>corriente</span>
-            </h1>
             <p
               className={`max-w-3xl mx-auto leading-relaxed transition-colors text-popover-foreground text-center font-sans text-base sm:text-lg md:text-xl lg:text-2xl px-2 ${
                 isDark ? "text-gray-300" : "text-gray-600"
