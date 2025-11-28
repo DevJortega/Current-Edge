@@ -9,30 +9,6 @@ export function Footer({ isDark = false }: FooterProps) {
     <footer id="contacto" className="bg-transparent py-12 px-4 sm:px-6 lg:px-8 relative">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div
-                className={`w-8 h-8 ${
-                  isDark ? "bg-yellow-400/20" : "bg-blue-500/20"
-                } rounded-lg flex items-center justify-center`}
-              >
-                <span className={`${isDark ? "text-yellow-400" : "text-blue-600"} font-bold text-sm`}>⚡</span>
-              </div>
-              <span
-                className={`font-bold text-lg text-popover-foreground ${isDark ? "text-yellow-400" : "text-blue-700"}`}
-              >
-                Current Edge
-              </span>
-            </div>
-            <p className={`text-sm leading-relaxed text-popover-foreground ${isDark ? "text-white" : "text-gray-700"}`}>
-              "Midiendo el Futuro, Amperio por Amperio"
-              <br />
-              Team Bravo - Electrónica III
-              <br />
-              Universidad del Norte
-            </p>
-          </div>
-
           <div>
             <h4
               className={`font-semibold mb-4 text-lg text-popover-foreground ${
@@ -79,7 +55,7 @@ export function Footer({ isDark = false }: FooterProps) {
         <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
           <div className="text-center sm:text-left">
             <p className={`text-popover-foreground text-sm ${isDark ? "text-white" : "text-gray-700"}`}>
-              © 2025 Current Edge - Team Bravo | Electrónica III
+              © 2025 Team Bravo | Electrónica III
             </p>
             <p className={`text-popover-foreground text-sm ${isDark ? "text-gray-300" : "text-gray-600"}`}>
               Universidad del Norte • Diseño Analógico • Semestre 2025-1
