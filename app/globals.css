@@ -1,64 +1,144 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
 
-/* Variables */
+@custom-variant dark (&:is(.dark *));
+
 :root {
-  --background: rgb(23, 32, 52);
-  --foreground: 15 23 42;
-  --primary: 59 130 246;
-  --primary-foreground: 248 250 252;
-  --secondary: 241 245 249;
-  --secondary-foreground: 15 23 42;
-  --muted: 248 250 252;
-  --muted-foreground: 100 116 139;
-  --accent: 14 165 233;
-  --accent-foreground: 248 250 252;
-  --border: 226 232 240;
-  --input: rgb(23, 23, 47);
-  --ring: 59 130 246;
+  --background: hsl(217, 32%, 17%);
+  --foreground: hsl(217, 32%, 17%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(217, 32%, 17%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(217, 32%, 17%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(206, 6%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(217, 32%, 17%);
+  --muted: hsl(206, 6%, 98%);
+  --muted-foreground: hsl(215, 14%, 55%);
+  --accent: hsl(186, 100%, 50%);
+  --accent-foreground: hsl(206, 6%, 98%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 96%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(217, 17%, 18%);
+  --ring: hsl(217, 91%, 60%);
+  --chart-1: hsl(12, 76%, 61%);
+  --chart-2: hsl(173, 58%, 39%);
+  --chart-3: hsl(197, 89%, 48%);
+  --chart-4: hsl(43, 74%, 66%);
+  --chart-5: hsl(27, 87%, 67%);
+  --radius: 0.5rem;
+  --sidebar: hsl(217, 32%, 17%);
+  --sidebar-foreground: hsl(217, 32%, 17%);
+  --sidebar-primary: hsl(217, 91%, 60%);
+  --sidebar-primary-foreground: hsl(206, 6%, 98%);
+  --sidebar-accent: hsl(186, 100%, 50%);
+  --sidebar-accent-foreground: hsl(206, 6%, 98%);
+  --sidebar-border: hsl(214, 32%, 91%);
+  --sidebar-ring: hsl(217, 91%, 60%);
 }
 
 .dark {
-  --background: 2 6 23;
-  --foreground: 248 250 252;
-  --primary: 59 130 246;
-  --primary-foreground: 15 23 42;
-  --secondary: 30 41 59;
-  --secondary-foreground: 248 250 252;
-  --muted: 30 41 59;
-  --muted-foreground: 148 163 184;
-  --accent: 30 41 59;
-  --accent-foreground: 248 250 252;
-  --border: 30 41 59;
-  --input: 30 41 59;
-  --ring: 148 163 184;
+  --background: hsl(224, 100%, 8%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(220, 13%, 13%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(220, 13%, 13%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(217, 32%, 17%);
+  --secondary: hsl(217, 16%, 21%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 16%, 21%);
+  --muted-foreground: hsl(215, 13%, 74%);
+  --accent: hsl(217, 16%, 21%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 16%, 21%);
+  --input: hsl(217, 16%, 21%);
+  --ring: hsl(215, 13%, 74%);
+  --chart-1: hsl(12, 76%, 61%);
+  --chart-2: hsl(173, 58%, 39%);
+  --chart-3: hsl(197, 89%, 48%);
+  --chart-4: hsl(43, 74%, 66%);
+  --chart-5: hsl(27, 87%, 67%);
+  --sidebar: hsl(220, 13%, 13%);
+  --sidebar-foreground: hsl(210, 40%, 98%);
+  --sidebar-primary: hsl(217, 91%, 60%);
+  --sidebar-primary-foreground: hsl(217, 32%, 17%);
+  --sidebar-accent: hsl(217, 16%, 21%);
+  --sidebar-accent-foreground: hsl(210, 40%, 98%);
+  --sidebar-border: hsl(217, 16%, 21%);
+  --sidebar-ring: hsl(215, 13%, 74%);
+}
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
 }
 
 @layer base {
   * {
-    border-color: rgb(var(--border));
+    border-color: hsl(var(--border));
+    @apply border-border outline-ring/50;
   }
 
-  html, body {
+  html,
+  body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    color: rgb(var(--foreground));
+    color: hsl(var(--foreground));
+    @apply bg-background text-foreground;
   }
 
   /* 🎨 Degradado modo claro */
   body {
     @apply bg-gradient-to-r from-blue-50 via-white to-blue-100;
-    background-attachment: fixed; /* Mantiene el degradado fijo */
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   /* 🌙 Degradado modo oscuro con difuminado suave */
   .dark body {
-    background: 
-      radial-gradient(ellipse at 25% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    background: radial-gradient(ellipse at 25% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
       radial-gradient(ellipse at 75% 80%, rgba(29, 78, 216, 0.12) 0%, transparent 60%),
       radial-gradient(ellipse at 50% 50%, rgba(30, 58, 138, 0.08) 0%, transparent 70%),
       linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 45%, #1e293b 65%, #0f172a 85%, #1e293b 100%);
@@ -69,8 +149,8 @@
   }
 
   /* 🔧 SOLUCIÓN: Hacer transparentes los elementos que sobrescriben el fondo */
-  main, 
-  section, 
+  main,
+  section,
   div:not(.card):not(.modal):not(.dropdown):not(.bg-white):not(.bg-background),
   article,
   .container {
@@ -78,7 +158,7 @@
   }
 
   /* Contenedor principal heredar el fondo */
-  #__next, 
+  #__next,
   .app,
   main {
     min-height: 100vh;
@@ -88,37 +168,37 @@
 
 @layer utilities {
   .bg-background {
-    background-color: rgb(var(--background));
+    background-color: hsl(var(--background));
   }
   .text-foreground {
-    color: rgb(var(--foreground));
+    color: hsl(var(--foreground));
   }
   .bg-primary {
-    background-color: rgb(var(--primary));
+    background-color: hsl(var(--primary));
   }
   .text-primary-foreground {
-    color: rgb(var(--primary-foreground));
+    color: hsl(var(--primary-foreground));
   }
   .bg-secondary {
-    background-color: rgb(var(--secondary));
+    background-color: hsl(var(--secondary));
   }
   .text-secondary-foreground {
-    color: rgb(var(--secondary-foreground));
+    color: hsl(var(--secondary-foreground));
   }
   .bg-muted {
-    background-color: rgb(var(--muted));
+    background-color: hsl(var(--muted));
   }
   .text-muted-foreground {
-    color: rgb(var(--muted-foreground));
+    color: hsl(var(--muted-foreground));
   }
   .bg-accent {
-    background-color: rgb(var(--accent));
+    background-color: hsl(var(--accent));
   }
   .text-accent-foreground {
-    color: rgb(var(--accent-foreground));
+    color: hsl(var(--accent-foreground));
   }
   .border-border {
-    border-color: rgb(var(--border));
+    border-color: hsl(var(--border));
   }
 
   /* 🎯 Utilidades personalizadas para elementos que necesitan fondo */
@@ -126,7 +206,7 @@
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
   }
-  
+
   .bg-card-dark {
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
@@ -138,12 +218,12 @@
   }
 
   .dark .force-bg-white {
-    background-color: rgb(var(--background)) !important;
+    background-color: hsl(var(--background)) !important;
   }
 
   /* 🟡 Color amarillo para la palabra "corriente" en modo oscuro */
   .text-highlight {
-    color: rgb(var(--foreground));
+    color: hsl(var(--foreground));
   }
 
   .dark .text-highlight {
