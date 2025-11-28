@@ -319,7 +319,7 @@
     pointer-events: none;
   }
 
-  /* ⚪ Fondo blanco para el logo en modo claro */
+  /* ⚪ Fondo blanco para el logo SOLO en modo claro */
   .logo-bg-white {
     background-color: white !important;
     border-radius: 50%;
@@ -327,9 +327,14 @@
     box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
   }
 
+  /* 🌙 Sin fondo en modo oscuro */
   .dark .logo-bg-white {
     background-color: transparent !important;
-    box-shadow: none;
-    padding: 0;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .dark .logo-container-dark {
+    background-color: transparent !important;
   }
 }
