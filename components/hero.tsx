@@ -25,11 +25,15 @@ export function Hero({ isDark }: HeroProps) {
     >
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-6 sm:space-y-8">
-          {/* Logo con fondo blanco en modo claro */}
-          <div className="flex justify-center mb-8">
-            <div className={`logo-bg-white inline-flex items-center justify-center ${isDark ? 'logo-container-dark' : 'logo-container-light'}`}>
+          {/* Logo con fondo blanco solo en modo claro */}
+          <div className="flex justify-center mb-6">
+            <div className={`inline-flex items-center justify-center transition-all duration-300 ${
+              isDark 
+                ? 'logo-container-dark' 
+                : 'logo-bg-white logo-container-light'
+            }`}>
               <svg 
-                className="w-24 h-24 sm:w-32 sm:h-32" 
+                className="w-20 h-20 sm:w-24 sm:h-24" 
                 viewBox="0 0 100 100" 
                 fill="none" 
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +61,7 @@ export function Hero({ isDark }: HeroProps) {
 
           {/* Título */}
           <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold transition-colors ${
-            isDark ? "text-white" : "text-blue-600"
+            isDark ? "text-yellow-400" : "text-blue-600"
           }`}>
             Current Edge
           </h2>
