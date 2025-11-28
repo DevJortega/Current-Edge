@@ -59,17 +59,14 @@ export function Product({ isDark }: ProductProps) {
               <h3
                 className={`font-bold mb-3 sm:mb-4 text-left font-sans text-2xl sm:text-3xl transition-colors ${isDark ? "text-yellow-400" : "text-blue-600"}`}
               >
-                Amperimetrix v2.0
+                Amperimetrix v1.0
               </h3>
               
               {/* 👇 DESCRIPCIÓN DETALLADA - Cambia aquí */}
               <p
                 className={`leading-relaxed mb-4 sm:mb-6 text-left font-sans leading-6 sm:leading-7 tracking-normal text-sm sm:text-base transition-colors ${isDark ? "text-gray-300" : "text-gray-600"}`}
               >
-                Su esencia y su nombre (&quot;2.0&quot;) radican en que es la evolución de nuestro primer gran hito: el
-                diseño y construcción de nuestro propio Amplificador Operacional. Este Op-Amp, optimizado desde sus
-                transistores internos, es el corazón de Amperimetrix 2.0, proporcionando la base para una medición de
-                corriente de alta estabilidad y respuesta ultrarrápida.
+                Su esencia y su nombre (“&quot;1.0&quot;”) representan el punto de partida de un nuevo estándar en medición: la primera versión de nuestro amperímetro de alta precisión. En esta etapa inicial, Amperimetrix 1.0 integra el sensor de corriente WCS1900, un componente reconocido por su excelente estabilidad, precisión y rápida respuesta dinámica. Gracias a este sensor, nuestro equipo ofrece mediciones confiables incluso en condiciones exigentes, estableciendo la base tecnológica sobre la que seguiremos evolucionando nuestras futuras versiones.
               </p>
             </div>
 
