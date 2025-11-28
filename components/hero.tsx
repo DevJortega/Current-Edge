@@ -25,40 +25,6 @@ export function Hero({ isDark }: HeroProps) {
     >
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-6 sm:space-y-8">
-          {/* Logo con fondo blanco solo en modo claro */}
-          <div className="flex justify-center mb-6">
-            <div
-              className={`inline-flex items-center justify-center transition-all duration-300 ${
-                isDark ? "logo-container-dark" : "logo-bg-white logo-container-light"
-              }`}
-            >
-              <svg
-                className="w-20 h-20 sm:w-24 sm:h-24"
-                viewBox="0 0 100 100"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="45"
-                  stroke={isDark ? "#fbbf24" : "#3b82f6"}
-                  strokeWidth="2"
-                  fill="none"
-                  opacity="0.3"
-                />
-                <path
-                  d="M55 20L35 50H50L45 80L65 50H50L55 20Z"
-                  stroke={isDark ? "#fbbf24" : "#1e40af"}
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                />
-              </svg>
-            </div>
-          </div>
-
           {/* Título */}
           <h2
             className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold transition-colors ${
