@@ -21,10 +21,47 @@ export function Hero({ isDark }: HeroProps) {
   return (
     <section
       id="inicio"
-      className={`pt-12 sm:pt-16 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${isDark ? "bg-black" : "bg-white"}`}
+      className="pt-12 sm:pt-16 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 transition-colors duration-300 bg-transparent"
     >
       <div className="container mx-auto max-w-6xl">
         <div className="text-center space-y-6 sm:space-y-8">
+          {/* Logo con fondo blanco en modo claro */}
+          <div className="flex justify-center mb-8">
+            <div className={`logo-bg-white inline-flex items-center justify-center ${isDark ? 'logo-container-dark' : 'logo-container-light'}`}>
+              <svg 
+                className="w-24 h-24 sm:w-32 sm:h-32" 
+                viewBox="0 0 100 100" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle 
+                  cx="50" 
+                  cy="50" 
+                  r="45" 
+                  stroke={isDark ? "#fbbf24" : "#3b82f6"}
+                  strokeWidth="2"
+                  fill="none"
+                  opacity="0.3"
+                />
+                <path 
+                  d="M55 20L35 50H50L45 80L65 50H50L55 20Z" 
+                  stroke={isDark ? "#fbbf24" : "#1e40af"}
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+              </svg>
+            </div>
+          </div>
+
+          {/* Título */}
+          <h2 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold transition-colors ${
+            isDark ? "text-white" : "text-blue-600"
+          }`}>
+            Current Edge
+          </h2>
+
           <div className="space-y-4">
             <h1
               className={`font-bold transition-colors text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans px-2 sm:px-4 py-0 mx-1.5 my-0 border-0 text-center tracking-normal leading-tight sm:leading-normal ${
@@ -71,8 +108,7 @@ export function Hero({ isDark }: HeroProps) {
             </Button>
           </div>
 
-          {/* ⚡ Contenedor del logo con efecto de contraste */}
-          <div className={`mb-0 mt-8 sm:mt-12 ml-0 mr-0 px-4 sm:px-6 py-8 sm:py-11 border-0 bg-transparent text-transparent border-transparent relative ${isDark ? 'logo-container-dark' : 'logo-container-light'}`}>
+          <div className="mb-0 mt-8 sm:mt-12 ml-0 mr-0 px-4 sm:px-6 py-8 sm:py-11 border-0 bg-transparent text-transparent border-transparent">
             <img
               src="/images/design-mode/AMPERIMETRO-.png"
               alt="Circuito electrónico moderno"
