@@ -30,9 +30,9 @@ export function Product({ isDark }: ProductProps) {
           
           {/* 👇 DESCRIPCIÓN PRINCIPAL - Cambia aquí */}
           <p
-            className={`max-w-3xl mx-auto text-center font-sans text-base sm:text-lg md:text-xl lg:text-2xl px-2 transition-colors ${isDark ? "text-gray-300" : "text-gray-600"}`}
+            className={`max-w-3xl mx-auto font-sans text-base sm:text-lg md:text-xl lg:text-2xl px-2 transition-colors text-secondary text-center ${isDark ? "text-gray-300" : "text-gray-600"}`}
           >
-            En Current Edge llevamos la medición de corriente a otro nivel. Nuestro nuevo sistema combina amplificadores operacionales de diseño propio, protección inteligente y una respuesta ultrarrápida, todo dentro de un formato compacto y adaptable. El resultado es un amperímetro de alta precisión creado para rendir al máximo incluso en las aplicaciones más exigentes.
+            {"En Current Edge llevamos la medición de corriente a un nuevo nivel. Nuestro amperímetro combina un diseño propio, protección inteligente y una respuesta rápida en un formato compacto y versátil. El resultado: mediciones precisas y confiables, incluso en las aplicaciones más exigentes."}
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export function Product({ isDark }: ProductProps) {
 
           <div className="space-y-4 sm:space-y-6">
             <div>
-              <Badge className="mb-3 sm:mb-4">Producto Principal</Badge>
+              <Badge className="mb-3 sm:mb-4"></Badge>
               
               {/* 👇 TÍTULO SECUNDARIO - Cambia aquí */}
               <h3
@@ -64,9 +64,9 @@ export function Product({ isDark }: ProductProps) {
               
               {/* 👇 DESCRIPCIÓN DETALLADA - Cambia aquí */}
               <p
-                className={`leading-relaxed mb-4 sm:mb-6 text-left font-sans leading-6 sm:leading-7 tracking-normal text-sm sm:text-base transition-colors ${isDark ? "text-gray-300" : "text-gray-600"}`}
+                className={`leading-relaxed mb-4 sm:mb-6 font-sans leading-6 sm:leading-7 tracking-normal transition-colors text-xl text-justify text-secondary ${isDark ? "text-gray-300" : "text-gray-600"}`}
               >
-                Su esencia y su nombre (“&quot;1.0&quot;”) representan el punto de partida de un nuevo estándar en medición: la primera versión de nuestro amperímetro de alta precisión. En esta etapa inicial, Amperimetrix 1.0 integra el sensor de corriente WCS1900, un componente reconocido por su excelente estabilidad, precisión y rápida respuesta dinámica. Gracias a este sensor, nuestro equipo ofrece mediciones confiables incluso en condiciones exigentes, estableciendo la base tecnológica sobre la que seguiremos evolucionando nuestras futuras versiones.
+                Su esencia y su nombre (&quot;1.0”) representan el punto de partida de un nuevo estándar en medición: la primera versión de nuestro amperímetro de alta precisión. En esta etapa inicial, Amperimetrix 1.0 integra el sensor de corriente WCS1900, un componente reconocido por su excelente estabilidad y rápida respuesta dinámica. Gracias a este sensor, nuestro equipo ofrece mediciones confiables incluso en condiciones exigentes, estableciendo la base tecnológica sobre la que seguiremos evolucionando nuestras futuras versiones.
               </p>
             </div>
 

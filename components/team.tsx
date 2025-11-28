@@ -52,7 +52,7 @@ export function Team({ isDark }: TeamProps) {
             Conoce a los visionarios del proyecto
           </h2>
           <p
-            className={`text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-2 transition-colors ${isDark ? "text-gray-300" : "text-gray-600"}`}
+            className={`text-base max-w-3xl mx-auto px-2 transition-colors font-sans leading-7 sm:text-2xl text-gray-950 ${isDark ? "text-gray-300" : "text-gray-600"}`}
           >
             Nuestro equipo combina experiencia técnica con innovación, trabajando juntos para crear soluciones
             electrónicas.
