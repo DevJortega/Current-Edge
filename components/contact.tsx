@@ -53,10 +53,9 @@ interface ContactProps {
 // ===== COMPONENTE =====
 export function Contact({ isDark }: ContactProps) {
   const socialLinks: { icon: React.FC; label: string; href: string; gradient?: boolean }[] = [
-    { icon: GithubIcon, label: "GitHub", href: "https://github.com/currentedge-solutions" },
-    { icon: LinkedinIcon, label: "LinkedIn", href: "https://linkedin.com/company/currentedge-solutions" },
-    { icon: InstagramIcon, label: "Instagram", href: "https://www.instagram.com/current.edgeco/", gradient: true },
-  ]
+  { icon: InstagramIcon, label: "Instagram", href: "https://www.instagram.com/current.edgeco/", gradient: true },
+]
+
 
   const contactInfo: { icon: React.FC; label: string; value: string }[] = [
     { icon: MailIcon, label: "Email", value: "contacto@currentedge-solutions.com" },
