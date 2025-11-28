@@ -122,6 +122,7 @@
   html,
   body {
     min-height: 100vh;
+    width: 100%;
     margin: 0;
     padding: 0;
     color: hsl(var(--foreground));
@@ -154,24 +155,8 @@
       );
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 
-      600px 600px,
-      500px 500px,
-      700px 700px,
-      800px 800px,
-      650px 650px,
-      550px 550px,
-      600px 600px,
-      cover;
-    background-position: 
-      20% 15%,
-      80% 25%,
-      50% 60%,
-      35% 45%,
-      70% 70%,
-      15% 80%,
-      85% 85%,
-      center;
+    background-size: 100% 100%;
+    background-position: center center;
   }
 
   /* 🌙 Degradado modo oscuro - MEJORADO con más tonalidades y profundidad */
@@ -206,34 +191,14 @@
       );
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 
-      600px 600px,
-      550px 550px,
-      700px 700px,
-      850px 850px,
-      700px 700px,
-      600px 600px,
-      650px 650px,
-      750px 750px,
-      680px 680px,
-      cover;
-    background-position: 
-      20% 15%,
-      78% 22%,
-      50% 55%,
-      35% 48%,
-      65% 68%,
-      18% 75%,
-      82% 80%,
-      42% 30%,
-      58% 85%,
-      center;
+    background-size: 100% 100%;
+    background-position: center center;
   }
 
   /* 🔧 SOLUCIÓN: Hacer transparentes los elementos que sobrescriben el fondo */
   main,
   section,
-  div:not(.card):not(.modal):not(.dropdown):not(.bg-white):not(.bg-background),
+  div:not(.card):not(.modal):not(.dropdown):not(.bg-white):not(.bg-background):not(.logo-bg-white),
   article,
   .container {
     background-color: transparent !important;
@@ -244,6 +209,7 @@
   .app,
   main {
     min-height: 100vh;
+    width: 100%;
     background: transparent;
   }
 }
@@ -351,5 +317,19 @@
     border-radius: 50%;
     z-index: -1;
     pointer-events: none;
+  }
+
+  /* ⚪ Fondo blanco para el logo en modo claro */
+  .logo-bg-white {
+    background-color: white !important;
+    border-radius: 50%;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
+  }
+
+  .dark .logo-bg-white {
+    background-color: transparent !important;
+    box-shadow: none;
+    padding: 0;
   }
 }
