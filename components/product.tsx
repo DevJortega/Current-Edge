@@ -109,12 +109,13 @@ export function Product({ isDark }: ProductProps) {
                   </tr>
                 </thead>
                 <tbody>
+
   <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
-    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium font-sans text-sm sm:text-base md:text-lg ${isDark ? "text-white" : "text-gray-900"}`}>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
       Modelo
     </td>
-    <td className={`py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base md:text-lg font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
-      Amperimetrix v1.0
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+      Amperímetro Current Edge v1.0
     </td>
   </tr>
 
@@ -123,7 +124,7 @@ export function Product({ isDark }: ProductProps) {
       Sensor de corriente
     </td>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
-      WCS1900 (sensor Hall lineal, ±20 A, 60 mV/A)
+      WCS1800 (sensor Hall lineal, ±20 A)
     </td>
   </tr>
 
@@ -132,64 +133,84 @@ export function Product({ isDark }: ProductProps) {
       Rango de medición
     </td>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
-      15 A – 20 A
+      0 – 20 A DC
     </td>
   </tr>
 
   <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
-      Núcleo de procesamiento
+      Resolución
     </td>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
-      Op-Amp personalizado (diseño propio)
+      0.1 A
     </td>
   </tr>
 
   <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
-      Arquitectura del circuito
+      Precisión típica
     </td>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
-      Acondicionamiento analógico con amplificación, filtrado RC y salida escalada 0–12V
+      1.20% de error promedio
     </td>
   </tr>
 
   <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
-      Topología
+      Máximo error medido
     </td>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
-      Configuración con transistores PNP/NPN
+      5.26%
     </td>
   </tr>
 
   <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
-      Ancho de banda
+      Etapa analógica
     </td>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
-      23 kHz (sensor) / 180 kHz (etapa de salida)
+      Acondicionamiento con OTA (amplificador transconductancia)
     </td>
   </tr>
 
   <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
-      Entrada
+      Procesamiento digital
     </td>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
-      5 V
+      Microcontrolador Arduino (conversión y ecuación de calibración)
+    </td>
+  </tr>
+
+  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
+      Pantalla
+    </td>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+      OLED integrada (resolución 0.1 A)
+    </td>
+  </tr>
+
+  <tr className={`border-b ${isDark ? "border-gray-600" : "border-gray-200"}`}>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
+      Alimentación
+    </td>
+    <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+      12 V DC
     </td>
   </tr>
 
   <tr>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-white" : "text-gray-900"}`}>
-      Salida
+      Potencia
     </td>
     <td className={`py-2 sm:py-3 px-2 sm:px-4 font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
-      0–12 V
+      0.479 W
     </td>
   </tr>
+
 </tbody>
+
 
               </table>
             </div>
