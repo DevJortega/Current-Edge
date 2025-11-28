@@ -2,43 +2,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-const CpuIcon = () => (
-  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
-    <rect x="9" y="9" width="6" height="6" />
-    <line x1="9" y1="1" x2="9" y2="4" />
-    <line x1="15" y1="1" x2="15" y2="4" />
-    <line x1="9" y1="20" x2="9" y2="23" />
-    <line x1="15" y1="20" x2="15" y2="23" />
-    <line x1="20" y1="9" x2="23" y2="9" />
-    <line x1="20" y1="14" x2="23" y2="14" />
-    <line x1="1" y1="9" x2="4" y2="9" />
-    <line x1="1" y1="14" x2="4" y2="14" />
-  </svg>
-)
-
-const WifiIcon = () => (
-  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-    <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-    <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-    <line x1="12" y1="20" x2="12.01" y2="20" />
-  </svg>
-)
-
-const BatteryIcon = () => (
-  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <rect x="1" y="6" width="18" height="12" rx="2" ry="2" />
-    <line x1="23" y1="13" x2="23" y2="11" />
-  </svg>
-)
-
-const ShieldIcon = () => (
-  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-  </svg>
-)
-
 const ArrowRightIcon = () => (
   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <line x1="5" y1="12" x2="19" y2="12" />
@@ -51,47 +14,25 @@ interface ProductProps {
 }
 
 export function Product({ isDark }: ProductProps) {
-  const features = [
-    {
-      icon: CpuIcon,
-      title: "Procesamiento Avanzado",
-      description: "Microcontrolador de alta performance para procesamiento en tiempo real",
-    },
-    {
-      icon: WifiIcon,
-      title: "Conectividad IoT",
-      description: "Comunicación inalámbrica integrada para aplicaciones IoT",
-    },
-    {
-      icon: BatteryIcon,
-      title: "Eficiencia Energética",
-      description: "Diseño optimizado para máxima duración de batería",
-    },
-    {
-      icon: ShieldIcon,
-      title: "Seguridad Integrada",
-      description: "Protocolos de seguridad avanzados para datos críticos",
-    },
-  ]
-
   return (
     <section
       id="producto"
       className={`py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-transparent ${isDark ? "bg-gray-900" : "bg-slate-50"}`}
     >
       <div className="container mx-auto max-w-6xl">
+        {/* 👇 TÍTULO PRINCIPAL - Cambia aquí */}
         <div className="text-center space-y-3 sm:space-y-4 mb-12 sm:mb-16">
           <h2
             className={`font-bold font-sans text-2xl sm:text-3xl md:text-4xl transition-colors ${isDark ? "text-white" : "text-gray-900"}`}
           >
-            Explora nuestro <span className={isDark ? "text-yellow-400" : "text-blue-600"}>amperimetrix v.2.0</span>
+            Explora nuestro <span className={isDark ? "text-yellow-400" : "text-blue-600"}>amperimetrix v.1.0</span>
           </h2>
+          
+          {/* 👇 DESCRIPCIÓN PRINCIPAL - Cambia aquí */}
           <p
             className={`max-w-3xl mx-auto text-center font-sans text-base sm:text-lg md:text-xl lg:text-2xl px-2 transition-colors ${isDark ? "text-gray-300" : "text-gray-600"}`}
           >
-            Presentamos nuestro sistema de medición de corriente de alta precisión que integra amplificadores
-            operacionales propios, protección avanzada y respuesta ultrarrápida en un diseño compacto y versátil para
-            aplicaciones críticas.
+            En Current Edge llevamos la medición de corriente a otro nivel. Nuestro nuevo sistema combina amplificadores operacionales de diseño propio, protección inteligente y una respuesta ultrarrápida, todo dentro de un formato compacto y adaptable. El resultado es un amperímetro de alta precisión creado para rendir al máximo incluso en las aplicaciones más exigentes.
           </p>
         </div>
 
@@ -113,11 +54,15 @@ export function Product({ isDark }: ProductProps) {
           <div className="space-y-4 sm:space-y-6">
             <div>
               <Badge className="mb-3 sm:mb-4">Producto Principal</Badge>
+              
+              {/* 👇 TÍTULO SECUNDARIO - Cambia aquí */}
               <h3
                 className={`font-bold mb-3 sm:mb-4 text-left font-sans text-2xl sm:text-3xl transition-colors ${isDark ? "text-yellow-400" : "text-blue-600"}`}
               >
                 Amperimetrix v2.0
               </h3>
+              
+              {/* 👇 DESCRIPCIÓN DETALLADA - Cambia aquí */}
               <p
                 className={`leading-relaxed mb-4 sm:mb-6 text-left font-sans leading-6 sm:leading-7 tracking-normal text-sm sm:text-base transition-colors ${isDark ? "text-gray-300" : "text-gray-600"}`}
               >
@@ -127,8 +72,6 @@ export function Product({ isDark }: ProductProps) {
                 corriente de alta estabilidad y respuesta ultrarrápida.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">{features.map((feature, index) => null)}</div>
 
             <Button
               className={`w-full sm:w-auto group transition-colors ${
@@ -144,6 +87,7 @@ export function Product({ isDark }: ProductProps) {
           </div>
         </div>
 
+        {/* TABLA DE ESPECIFICACIONES */}
         <Card id="especificaciones" className={isDark ? "bg-gray-800 border-gray-700" : "bg-white border-gray-200"}>
           <CardHeader>
             <CardTitle className={`font-serif text-xl sm:text-2xl ${isDark ? "text-white" : "text-gray-900"}`}>
