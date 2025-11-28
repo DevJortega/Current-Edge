@@ -71,11 +71,12 @@ export function Hero({ isDark }: HeroProps) {
             </Button>
           </div>
 
-          <div className="mb-0 mt-8 sm:mt-12 ml-0 mr-0 px-4 sm:px-6 py-8 sm:py-11 border-0 bg-transparent text-transparent border-transparent">
+          {/* ⚡ Contenedor del logo con efecto de contraste */}
+          <div className={`mb-0 mt-8 sm:mt-12 ml-0 mr-0 px-4 sm:px-6 py-8 sm:py-11 border-0 bg-transparent text-transparent border-transparent relative ${isDark ? 'logo-container-dark' : 'logo-container-light'}`}>
             <img
               src="/images/design-mode/AMPERIMETRO-.png"
               alt="Circuito electrónico moderno"
-              className="rounded-lg max-w-full h-auto text-xs mx-auto my-0 px-0 py-0 opacity-100 w-full sm:w-10/12 md:w-9/12 lg:w-8/12 shadow-none"
+              className="rounded-lg max-w-full h-auto text-xs mx-auto my-0 px-0 py-0 opacity-100 w-full sm:w-10/12 md:w-9/12 lg:w-8/12 shadow-none relative z-10"
             />
           </div>
         </div>

@@ -128,24 +128,106 @@
     @apply bg-background text-foreground;
   }
 
-  /* 🎨 Degradado modo claro */
+  /* 🎨 Degradado modo claro - MEJORADO con más tonalidades y profundidad */
   body {
-    @apply bg-gradient-to-r from-blue-50 via-white to-blue-100;
+    background: 
+      /* Puntos de luz brillantes */
+      radial-gradient(circle at 20% 15%, rgba(191, 219, 254, 0.8) 0%, transparent 35%),
+      radial-gradient(circle at 80% 25%, rgba(219, 234, 254, 0.6) 0%, transparent 40%),
+      radial-gradient(circle at 50% 60%, rgba(239, 246, 255, 0.5) 0%, transparent 45%),
+      /* Tonos azules medios */
+      radial-gradient(ellipse at 35% 45%, rgba(147, 197, 253, 0.4) 0%, transparent 50%),
+      radial-gradient(ellipse at 70% 70%, rgba(191, 219, 254, 0.35) 0%, transparent 55%),
+      /* Tonos azules más oscuros para profundidad */
+      radial-gradient(ellipse at 15% 80%, rgba(96, 165, 250, 0.25) 0%, transparent 60%),
+      radial-gradient(ellipse at 85% 85%, rgba(59, 130, 246, 0.2) 0%, transparent 65%),
+      /* Base degradado con múltiples paradas */
+      linear-gradient(135deg, 
+        #f0f9ff 0%,
+        #e0f2fe 15%, 
+        #ffffff 25%,
+        #dbeafe 40%,
+        #f0f9ff 55%,
+        #bfdbfe 70%,
+        #e0f2fe 85%,
+        #f0f9ff 100%
+      );
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 
+      600px 600px,
+      500px 500px,
+      700px 700px,
+      800px 800px,
+      650px 650px,
+      550px 550px,
+      600px 600px,
+      cover;
+    background-position: 
+      20% 15%,
+      80% 25%,
+      50% 60%,
+      35% 45%,
+      70% 70%,
+      15% 80%,
+      85% 85%,
+      center;
   }
 
-  /* 🌙 Degradado modo oscuro con difuminado suave */
+  /* 🌙 Degradado modo oscuro - MEJORADO con más tonalidades y profundidad */
   .dark body {
-    background: radial-gradient(ellipse at 25% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
-      radial-gradient(ellipse at 75% 80%, rgba(29, 78, 216, 0.12) 0%, transparent 60%),
-      radial-gradient(ellipse at 50% 50%, rgba(30, 58, 138, 0.08) 0%, transparent 70%),
-      linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 45%, #1e293b 65%, #0f172a 85%, #1e293b 100%);
+    background: 
+      /* Puntos de luz brillantes (azules luminosos) */
+      radial-gradient(circle at 20% 15%, rgba(96, 165, 250, 0.3) 0%, transparent 30%),
+      radial-gradient(circle at 78% 22%, rgba(59, 130, 246, 0.25) 0%, transparent 35%),
+      radial-gradient(circle at 50% 55%, rgba(37, 99, 235, 0.2) 0%, transparent 40%),
+      /* Tonos azules medios */
+      radial-gradient(ellipse at 35% 48%, rgba(29, 78, 216, 0.18) 0%, transparent 50%),
+      radial-gradient(ellipse at 65% 68%, rgba(30, 64, 175, 0.15) 0%, transparent 55%),
+      /* Tonos azules más oscuros para profundidad */
+      radial-gradient(ellipse at 18% 75%, rgba(30, 58, 138, 0.12) 0%, transparent 58%),
+      radial-gradient(ellipse at 82% 80%, rgba(23, 37, 84, 0.1) 0%, transparent 62%),
+      /* Sombras sutiles adicionales */
+      radial-gradient(ellipse at 42% 30%, rgba(37, 99, 235, 0.08) 0%, transparent 65%),
+      radial-gradient(ellipse at 58% 85%, rgba(29, 78, 216, 0.06) 0%, transparent 70%),
+      /* Base degradado con múltiples paradas para suavidad */
+      linear-gradient(135deg, 
+        #0f172a 0%,
+        #1e293b 12%,
+        #1e3a8a 22%,
+        #334155 32%,
+        #1e293b 42%,
+        #172554 52%,
+        #0f172a 62%,
+        #1e293b 72%,
+        #334155 82%,
+        #1e293b 92%,
+        #0f172a 100%
+      );
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 150% 120%, 140% 110%, 160% 130%, cover;
-    background-position: top left, bottom right, center, center;
+    background-size: 
+      600px 600px,
+      550px 550px,
+      700px 700px,
+      850px 850px,
+      700px 700px,
+      600px 600px,
+      650px 650px,
+      750px 750px,
+      680px 680px,
+      cover;
+    background-position: 
+      20% 15%,
+      78% 22%,
+      50% 55%,
+      35% 48%,
+      65% 68%,
+      18% 75%,
+      82% 80%,
+      42% 30%,
+      58% 85%,
+      center;
   }
 
   /* 🔧 SOLUCIÓN: Hacer transparentes los elementos que sobrescriben el fondo */
@@ -240,5 +322,34 @@
   /* 🟡 Borde amarillo para el logo en modo oscuro */
   .logo-border-dark {
     stroke: #fbbf24 !important; /* Amarillo dorado */
+  }
+
+  /* ⚡ NUEVO: Sombra/contraste para el área del logo */
+  .logo-container-light {
+    position: relative;
+  }
+
+  .logo-container-light::before {
+    content: '';
+    position: absolute;
+    inset: -40px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .dark .logo-container-dark {
+    position: relative;
+  }
+
+  .dark .logo-container-dark::before {
+    content: '';
+    position: absolute;
+    inset: -40px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.35) 0%, rgba(29, 78, 216, 0.2) 40%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
   }
 }
