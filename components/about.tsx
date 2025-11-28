@@ -32,12 +32,6 @@ const AwardIcon = () => (
   </svg>
 )
 
-const LightningIcon = () => (
-  <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-  </svg>
-)
-
 interface AboutProps {
   isDark: boolean
 }
@@ -77,7 +71,9 @@ export function About({ isDark }: AboutProps) {
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          <h2 className={`font-bold mb-3 font-sans text-3xl sm:text-4xl md:text-5xl transition-colors leading-7 tracking-normal mt-0 sm:mb-4 ml-0 mr-0 px-0 py-4 border-0`}>
+          <h2
+            className={`font-bold mb-3 font-sans text-3xl sm:text-4xl md:text-5xl transition-colors leading-7 tracking-normal mt-0 sm:mb-4 ml-0 mr-0 px-0 py-4 border-0`}
+          >
             <span className={isDark ? "text-white" : "text-black"}>Sobre </span>
             <span className={isDark ? "text-yellow-400" : "text-blue-600"}>Current Edge</span>
           </h2>
@@ -86,7 +82,9 @@ export function About({ isDark }: AboutProps) {
               isDark ? "text-gray-300" : "text-gray-600"
             }`}
           >
-            Somos una empresa especializada en el diseño y desarrollo de instrumentos de medición de corriente eléctrica de alta precisión. Nuestro enfoque se centra en la innovación tecnológica y la excelencia en cada proyecto que emprendemos.
+            Somos una empresa especializada en el diseño y desarrollo de instrumentos de medición de corriente eléctrica
+            de alta precisión. Nuestro enfoque se centra en la innovación tecnológica y la excelencia en cada proyecto
+            que emprendemos.
           </p>
         </div>
 

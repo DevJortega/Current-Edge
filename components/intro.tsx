@@ -14,8 +14,8 @@ export function Intro({ isDark }: IntroProps) {
     >
       {/* Contenedor del logo con efecto hover */}
       <div
-        className={`w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 flex items-center justify-center transition-all duration-300 ease-in-out opacity-100 rounded-full shadow-2xl text-secondary-foreground tracking-normal flex-col mt-3 mb-4 sm:mb-6 ml-2.5 cursor-pointer hover:scale-110 bg-white ${
-          isDark ? "bg-blue-900/30 border-4 border-yellow-400" : "bg-blue-50 border-4 border-blue-200"
+        className={`w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 flex items-center justify-center transition-all duration-300 ease-in-out opacity-100 rounded-full shadow-2xl text-secondary-foreground tracking-normal flex-col mt-3 mb-4 sm:mb-6 ml-2.5 cursor-pointer hover:scale-110 ${
+          isDark ? "bg-transparent border-4 border-yellow-400" : "bg-white border-4 border-blue-200"
         }`}
       >
         <Image
